@@ -45,6 +45,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// testing
+app.get('/index'           , index.view);
+
 // Add routes here
 app.get('/'                , home.view);
 app.get('/add'             , unimplemented.view);
