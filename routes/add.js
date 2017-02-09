@@ -1,5 +1,11 @@
 var data = require("../data.json");
 
+
+exports.addSchedule = function (req, res) {
+    res.render('unimplemented', data);
+};
+
+// TODO: remove this
 exports.addFriend = function(req, res) { 
 	// Your code goes here
     var n = req.query["name"];
@@ -9,3 +15,4 @@ exports.addFriend = function(req, res) { 
     data.friends.push(newfriend);
     res.render('index',data);
  };
+

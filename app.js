@@ -3,24 +3,33 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var handlebars = require('express3-handlebars')
+var express    = require('express');
+var http       = require('http');
+var path       = require('path');
+var handlebars = require('express3-handlebars');
 
 // Define all the views here
 var index = require('./routes/index');
-var add = require('./routes/add');
+
+var unimplemented = require('./routes/unimplemented');
+// Screens
+var home            = require('./routes/home'            ); // home screen with stress level bar
+// var schedule        = require('./routes/schedule'        ); // schedule page with a lot of schedules
+// var add             = require('./routes/add'             ); // add activity and stress page
+// var stats           = require('./routes/stats'           ); // shows weekly status
+// var help            = require('./routes/help'            ); // show help and faq about the app
+// var contact         = require('./routes/contact'         ); // contact us form
+// var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 // Example route
 // var user = require('./routes/user');
 
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+app.set('port'          , process.env.PORT || 3000);
+app.set('views'         , path.join(__dirname        , 'views'));
+app.engine('handlebars' , handlebars());
+app.set('view engine'   , 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());
@@ -37,8 +46,14 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
-app.get('/add', add.addFriend);
+app.get('/'                , home.view);
+app.get('/add'             , unimplemented.view);
+app.get('/schedule'        , unimplemented.view);
+app.get('/stats'           , unimplemented.view);
+app.get('/contact'         , unimplemented.view);
+app.get('/contact_confirm' , unimplemented.view);
+app.get('/contact'         , unimplemented.view);
+app.get('/contact'         , unimplemented.view);
 // Example route
 // app.get('/users', user.list);
 

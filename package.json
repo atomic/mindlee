@@ -1,23 +1,21 @@
 {
-  "name": "IntroHCI",
+  "name": "Mindlee",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
-
+  "author": "Tymely",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab5"
+    "url": "https://github.com/atomic/mindlee"
   },
   "license": "MIT",
-
   "private": true,
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "3.x",
+    "express": "^3.21.2",
     "express3-handlebars": "*"
   },
   "engines": {
     "node": "0.10.x"
-  }  
+  }
 }
