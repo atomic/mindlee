@@ -49,10 +49,13 @@ if ('development' == app.get('env')) {
 app.get('/index'           , index.view);
 
 // Add routes here
-app.get('/'                , home.view);
-app.get('/home'                , home.view);
+app.get('/'                , schedule.view);
+app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/schedule'        , schedule.view);
+
+app.get('/add_activity'        , unimplemented.view);
+app.get('/error'            , unimplemented.view);
 // app.get('/stats'           , unimplemented.view);
 // app.get('/contact'         , unimplemented.view);
 // app.get('/contact_confirm' , unimplemented.view);
