@@ -28,7 +28,13 @@ var app = express();
 // all environments
 app.set('port'          , process.env.PORT || 3000);
 app.set('views'         , path.join(__dirname        , 'views'));
-app.engine('handlebars' , handlebars());
+app.engine('handlebars' , handlebars({
+
+    defaultLayout: __dirname + '/views/layouts/default.handlebars',
+    partialsDir: __dirname + '/views/partials',
+    layoutsDir: __dirname + '/views/layouts'
+
+}));
 app.set('view engine'   , 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -49,17 +55,17 @@ if ('development' == app.get('env')) {
 app.get('/index'           , index.view);
 
 // Add routes here
-app.get('/'                , schedule.view);
+app.get('/'                , home.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/schedule'        , schedule.view);
-
 app.get('/add_activity'        , unimplemented.view);
 app.get('/error'            , unimplemented.view);
-// app.get('/stats'           , unimplemented.view);
-// app.get('/contact'         , unimplemented.view);
-// app.get('/contact_confirm' , unimplemented.view);
-// app.get('/contact'         , unimplemented.view);
+app.get('/stats'           , unimplemented.view);
+app.get('/status'         , unimplemented.view);
+app.get('/contact_confirm' , unimplemented.view);
+app.get('/contact'         , unimplemented.view);
+app.get('/faq'         , unimplemented.view);
 // Example route
 // app.get('/users', user.list);
 

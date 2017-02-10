@@ -1,2 +1,21 @@
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
+body {
+    font-family: "Lato", sans-serif
+}
+
+.mySlides {
+    display: none
+}
+
+.greeting {
+    /*margin-top: 280px;*/
+}
+
+.main_content {
+    align-content: center;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    transform: translate(0%, 100%);
+}
