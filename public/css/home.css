@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
 body {
     font-family: "Lato", sans-serif
 }
@@ -10,12 +12,48 @@ body {
     /*margin-top: 280px;*/
 }
 
-.main_content {
+.content {
     align-content: center;
     vertical-align: middle;
     position: relative;
     float: left;
+}
+
+.main-content {
     /*top: 50%;*/
     /*left: 50%;*/
-    transform: translate(0%, 100%);
+    transform: translate(0%, 90%);
+}
+
+.schedule-content {
+    transform: translate(0%, 35%);
+}
+
+/*for schedule pages*/
+.schedule_header {
+    padding-top: 50px;
+}
+
+.plus {
+    height: 20px; width: 20px; overflow: hidden;
+    position: relative;
+}
+
+.schedule_body {
+    display: block;
+    align-content: center;
+}
+.schedule_header {
+    align-content: right;
+}
+
+.add-content {
+    align-content: center;
+    transform: translate(0%, 10%);
+}
+
+.activity {
+    border: solid 2px #0b0b0b;
+    align-content: center;
+    margin: 10px;
 }
