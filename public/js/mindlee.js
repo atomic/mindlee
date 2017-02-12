@@ -3,6 +3,7 @@
  */
 'use strict';
 
+
 $(document).ready(function() {
     initializePage();
 });
@@ -10,4 +11,5 @@ $(document).ready(function() {
 function initializePage() {
     console.log("Main Page connected!");
 }
+
 

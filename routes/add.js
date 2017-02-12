@@ -2,5 +2,7 @@ var data = require("../data.json");
 
 
 exports.view = function (req, res) {
-    res.render('add', data);
+    res.render('add', {
+        title: 'Add Activity'
+    });
 };

@@ -32,8 +32,10 @@ app.engine('handlebars' , handlebars({
 
     defaultLayout: __dirname + '/views/layouts/default.handlebars',
     partialsDir: __dirname + '/views/partials',
-    layoutsDir: __dirname + '/views/layouts'
-
+    layoutsDir: __dirname + '/views/layouts',
+    helpers: {
+        choose: function (val, backup) { return val ? val : backup; }
+    }
 }));
 app.set('view engine'   , 'handlebars');
 app.use(express.favicon());
@@ -59,7 +61,7 @@ app.get('/'                , home.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/schedule'        , schedule.view);
-app.get('/add_activity'        , unimplemented.view);
+app.get('/add_activity'    , unimplemented.view);
 app.get('/error'            , unimplemented.view);
 app.get('/stats'           , unimplemented.view);
 app.get('/status'         , unimplemented.view);

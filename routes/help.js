@@ -3,5 +3,7 @@
  */
 
 exports.view = function(req, res){
-    res.render('unimplemented', data );
+    res.render('help', {
+        title: 'Help'
+    });
 };
