@@ -13,13 +13,14 @@ var index = require('./routes/index');
 
 var unimplemented = require('./routes/unimplemented');
 // Screens
+var login           = require('./routes/login'            ); // Login Screen
 var home            = require('./routes/home'            ); // home screen with stress level bar
 var schedule        = require('./routes/schedule'        ); // schedule page with a lot of schedules
 var add             = require('./routes/add'             ); // add activity and stress page
-// var stats           = require('./routes/stats'           ); // shows weekly status
-// var help            = require('./routes/help'            ); // show help and faq about the app
-// var contact         = require('./routes/contact'         ); // contact us form
-// var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
+var stats           = require('./routes/stats'           ); // shows weekly status
+var help            = require('./routes/help'            ); // show help and faq about the app
+var contact         = require('./routes/contact'         ); // contact us form
+var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 // Example route
 // var user = require('./routes/user');
 
@@ -57,7 +58,7 @@ if ('development' == app.get('env')) {
 app.get('/index'           , index.view);
 
 // Add routes here
-app.get('/'                , home.view);
+app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/schedule'        , schedule.view);
