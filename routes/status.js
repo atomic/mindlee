@@ -1,7 +1,8 @@
 /**
  * Created by atomic on 2/9/17.
  */
+var data = require('../data.json');
 
 exports.view = function(req, res){
-    res.render('unimplemented', data );
+    res.render('status', data );
 };

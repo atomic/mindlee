@@ -17,9 +17,9 @@ var login           = require('./routes/login'            ); // Login Screen
 var home            = require('./routes/home'            ); // home screen with stress level bar
 var schedule        = require('./routes/schedule'        ); // schedule page with a lot of schedules
 var add             = require('./routes/add'             ); // add activity and stress page
-var stats           = require('./routes/stats'           ); // shows weekly status
-var help            = require('./routes/help'            ); // show help and faq about the app
+var status          = require('./routes/status'           ); // shows weekly status
 var contact         = require('./routes/contact'         ); // contact us form
+var help            = require('./routes/help'            ); // show help and faq about the app
 var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 // Example route
 // var user = require('./routes/user');
@@ -61,14 +61,15 @@ app.get('/index'           , index.view);
 app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
-app.get('/schedule'        , schedule.view);
 app.get('/add_activity'    , unimplemented.view);
-app.get('/error'            , unimplemented.view);
-app.get('/stats'           , unimplemented.view);
-app.get('/status'         , unimplemented.view);
+
+app.get('/schedule'        , schedule.view);
+app.get('/status'           , status.view);
+app.get('/contact'         , contact.view);
+app.get('/faq'             , help.view);
+app.get('/help'             , help.view);
 app.get('/contact_confirm' , unimplemented.view);
-app.get('/contact'         , unimplemented.view);
-app.get('/faq'         , unimplemented.view);
+app.get('/error'            , unimplemented.view);
 // Example route
 // app.get('/users', user.list);
 
