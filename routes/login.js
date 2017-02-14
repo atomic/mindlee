@@ -6,7 +6,7 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
     // console.log(data);
-    res.render('login', {title: 'Login'} );
+    res.render('login', {layout:false, title: 'Login'} );
 };
 
 

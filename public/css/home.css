@@ -22,7 +22,9 @@ body {
 .main-content {
     /*top: 50%;*/
     /*left: 50%;*/
-    transform: translate(0%, 90%);
+    /*margin-top: 120px;*/
+    padding-top: 120px;
+    /*transform: translate(0%, 130%);*/
 }
 
 .schedule-content {
