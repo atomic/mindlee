@@ -9,18 +9,18 @@
 
     <div class="schedule_body w3layouts">
 
+        {{#with data}}
+            {{#each activities}}
+                <div class="container activity">
+                    <p class="act_name">{{title}}</p>
+                    <p class="act_time">{{date}}</p>
+                    <button>Edit</button>
+                </div>
+            {{/each}}
+        {{/with}}
+
         <div class="container activity">
-            <p class="act_name">Activity Name</p>
-            <p class="act_time">Activity time</p>
-            <button>Edit</button>
-        </div>
-        <div class="container activity">
-            <p class="act_name">Activity Name</p>
-            <p class="act_time">Activity time</p>
-            <button>Edit</button>
-        </div>
-        <div class="container activity">
-            <p class="act_name">Activity Name</p>
+            <p class="act_name">Activity Last Test</p>
             <p class="act_time">Activity time</p>
             <button>Edit</button>
         </div>
