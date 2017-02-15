@@ -12,17 +12,14 @@
         {{#with data}}
             {{#each activities}}
                 <div class="container activity">
-                    <p class="act_name">{{title}}</p>
-                    <p class="act_time">{{date}}</p>
+                    <p>Title: {{ title }}</p>
+                    <p class="act_date">Date: {{date}}</p>
+                    <p class="act_time">Time: {{time}}</p>
+                    <p class="stress_level">Stress Level: {{stress_level}}</p>
                     <button>Edit</button>
                 </div>
             {{/each}}
         {{/with}}
 
-        <div class="container activity">
-            <p class="act_name">Activity Last Test</p>
-            <p class="act_time">Activity time</p>
-            <button>Edit</button>
-        </div>
     </div>
 </div>

@@ -1,8 +1,7 @@
-<div class="content container add-content">
+<div class="jumbotron main-content content container add-content bounceInUp">
     <div class="schedule_header container">
         <h2>Your Activity</h2>
     </div>
-
     <div class="schedule_body w3layouts">
         <form id="addActivityForm" role="form" method="get" action="/add_activity">
             <div class="form-group">
@@ -13,17 +12,12 @@
                 <label for="date">Date:</label>
                 <input type="date" class="form-control" id="date" placeholder="Date" name="date" value="2017-02-14" required="true">
             </div>
-            <div class="form-group">
-                <label for="time"> Time: </label>
-                <input type="time" class="form-control" id="time" placeholder="Time" name="time" value="14:42" required="true">
-            </div>
 
             <!--add time with bootstrap-timepicker-->
-            <!--<div class="input-group bootstrap-timepicker timepicker">-->
-                <!--<input id="timepicker1" type="text" class="form-control input-small">-->
-                <!--<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>-->
-            <!--</div>-->
-
+            <div class="form-group bootstrap-timepicker timepicker">
+                <label for="time"> Time: </label>
+                <input name="time" id="time" type="text" class="form-control" value="14:00" required="true" title="time">
+            </div>
 
 
             <div class="form-group">
@@ -39,5 +33,7 @@
 </div>
 
 <script type="text/javascript">
-    $('#timepicker1').timepicker();
+    $('#time').timepicker( {
+        showInputs: false
+    });
 </script>
