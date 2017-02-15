@@ -1,6 +1,6 @@
 {
   "name": "Mindlee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Tymely",
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
     "bower": "latest"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "7.5.x"
   }
 }
