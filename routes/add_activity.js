@@ -13,13 +13,13 @@ exports.addActivity = function (req, res) {
     var time = req.query["time"];
     var stress_level = req.query["stress_level"];
 
-    var newact = { title, date, time, stress_level};
+    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level};
     data.activities.push(newact);
 
-    console.log(data.activities);
-    fs.writeFile('../data.json', JSON.stringify(data), function (err) {
-        if(err) throw err;
-    });
+    // console.log(data.activities);
+    // fs.writeFile('../data.json', JSON.stringify(data), function (err) {
+    //     if(err) throw err;
+    // });
 
-    res.render('schedule', {title: 'Schedule', data} );
+    res.render('schedule', {title: 'Schedule', 'data' : data} );
 };
