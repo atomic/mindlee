@@ -17,6 +17,7 @@ var login           = require('./routes/login'            ); // Login Screen
 var home            = require('./routes/home'            ); // home screen with stress level bar
 var schedule        = require('./routes/schedule'        ); // schedule page with a lot of schedules
 var add             = require('./routes/add'             ); // add activity and stress page
+var add_activity    = require('./routes/add_activity'    ); // add act
 var status          = require('./routes/status'           ); // shows weekly status
 var contact         = require('./routes/contact'         ); // contact us form
 var help            = require('./routes/help'            ); // show help and faq about the app
@@ -61,7 +62,7 @@ app.get('/index'           , index.view);
 app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
-app.get('/add_activity'    , unimplemented.view);
+app.get('/add_activity'    , add_activity.addActivity);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);

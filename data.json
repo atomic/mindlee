@@ -2,11 +2,17 @@
 	"activities" : [
       {
         "title" : "Test Activity 1",
-        "date" : "1487109435112",
+        "date" : "2017-02-01",
+        "time" : "???",
         "hour" : "14",
         "min" : "1"
       }
     ],
+
+
+
+
+
 	"friends": [
 		{
 			"name": "Doug Engelbart",

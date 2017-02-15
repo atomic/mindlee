@@ -6,10 +6,12 @@
 
 $(document).ready(function() {
     initializePage();
+
+    // $("#date").valueAsDate = new Date();
 });
 
 function initializePage() {
-    console.log("Main Page connected!");
+    console.log("page connected!");
 }
 
 
