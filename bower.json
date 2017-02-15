@@ -1,0 +1,23 @@
+{
+  "name": "Mindlee",
+  "description": "App that keep tracks of user stress",
+  "main": "",
+  "authors": [
+    "Tymely"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mindfullness"
+  ],
+  "homepage": "https://github.com/atomic/mindlee",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-timepicker": "^0.5.2"
+  }
+}

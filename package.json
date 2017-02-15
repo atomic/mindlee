@@ -9,7 +9,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "express": "^3.21.2",
@@ -19,5 +20,5 @@
   },
   "engines": {
     "node": "0.10.x"
-  }
+  },
 }
