@@ -22,6 +22,7 @@ var status          = require('./routes/status'           ); // shows weekly sta
 var contact         = require('./routes/contact'         ); // contact us form
 var help            = require('./routes/help'            ); // show help and faq about the app
 var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
+var activities_json = require('./routes/activities_json');  // for ajax request data
 // Example route
 // var user = require('./routes/user');
 
@@ -63,6 +64,7 @@ app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/add_activity'    , add_activity.addActivity);
+app.get('/delete_activity' , activities_json.removeActivity);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);

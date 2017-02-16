@@ -60,5 +60,18 @@ body {
     margin: 10px;
 }
 
-.login-title {
+.text-danger {
+    color: red;
+    border: solid 2px red;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.stress-note {
+    margin-bottom: 30px;
+}
+
+/*add activity page */
+#ex1Slider .slider-selection {
+    background: #BABABA;
 }

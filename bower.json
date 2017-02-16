@@ -18,6 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-timepicker": "^0.5.2"
+    "bootstrap-timepicker": "^0.5.2",
+    "seiyria-bootstrap-slider": "^9.7.2"
   }
 }

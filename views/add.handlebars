@@ -1,3 +1,6 @@
+<script type="text/javascript" src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+<link rel="stylesheet"          href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css"    type="text/css" media="all">
+
 <div class="jumbotron main-content content container add-content bounceInUp">
     <div class="schedule_header container">
         <h2>Your Activity</h2>
@@ -20,13 +23,14 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group text-center">
                 <h4 class="panel-title">Stress Level</h4>
-                <input type="range" class="form-control" id="stress_level" value=50 name="stress_level" required="true" title="Stress Level">
+                <input type="range" class="form-control" id="stress_level" value=50 name="stress_level" required="true" title="Stress Level"
+                data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
             </div>
 
 
-            <a href="/home"> <input type="button" id="cancelAdd" class="btn btn-default" value="Cancel" action="/"/> </a>
+            <a href="/schedule"> <input type="button" id="cancelAdd" class="btn btn-default" value="Cancel" action="/"/> </a>
             <input type="submit" id="submitBtn" class="btn btn-default" value="Save"/>
         </form>
     </div>
@@ -35,5 +39,12 @@
 <script type="text/javascript">
     $('#time').timepicker( {
         showInputs: false
+    });
+
+    // With JQuery
+    $('#stress_level').slider({
+        formatter: function(value) {
+            return 'Current value: ' + value;
+        }
     });
 </script>

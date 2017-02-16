@@ -7,7 +7,7 @@
         </form>
     </div>
 
-    <div class="schedule_body w3layouts">
+    <div class="schedule_body w3layouts" id="schedule_body">
 
         {{#with data}}
             {{#each activities}}
@@ -16,7 +16,10 @@
                     <p class="act_date">Date: {{date}}</p>
                     <p class="act_time">Time: {{time}}</p>
                     <p class="stress_level">Stress Level: {{stress_level}}</p>
-                    <button>Edit</button>
+                    <div class="text-right">
+                        <a href="/add"><button href="/add_activity">Edit</button></a>
+                        <button class="delete-btn btn-danger">Delete</button>
+                    </div>
                 </div>
             {{/each}}
         {{/with}}

@@ -1,9 +1,17 @@
 {
-	"activities" : [
-      {
-        "title" : "Test Activity 1",
-        "date" : "2017-02-01",
-        "time" : "14:42"
-      }
-    ]
+  "total_activities" : 2,
+  "activities" : [
+    {
+      "title" : "Quiz 3",
+      "date" : "2017-02-15",
+      "time" : "9:30",
+      "stress_level" : "20"
+    },
+    {
+      "title" : "Work (Daily)",
+      "date" : "2017-02-16",
+      "time" : "3:00 PM",
+      "stress_level" : "30"
+    }
+  ]
 }
