@@ -11,7 +11,7 @@
 
         {{#with data}}
             {{#each activities}}
-                <div class="container activity">
+                <div class="container activity" data-id={{id}}>
                     <p>Title: {{ title }}</p>
                     <p class="act_date">Date: {{date}}</p>
                     <p class="act_time">Time: {{time}}</p>
@@ -19,6 +19,7 @@
                     <div class="text-right">
                         <a href="/add"><button href="/add_activity">Edit</button></a>
                         <button class="delete-btn btn-danger">Delete</button>
+                        <!--button is hooked to POST request in mindlee.js-->
                     </div>
                 </div>
             {{/each}}

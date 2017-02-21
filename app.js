@@ -64,7 +64,7 @@ app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/add_activity'    , add_activity.addActivity);
-app.get('/delete_activity' , activities_json.removeActivity);
+app.post('/delete_activity' , activities_json.removeActivity);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);

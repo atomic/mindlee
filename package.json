@@ -13,11 +13,12 @@
     "postinstall": "bower install"
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
+    "bower": "latest",
     "express": "^3.21.2",
     "express3-handlebars": "*",
-    "handlebars-layout": "latest",
     "handlebars": "latest",
-    "bower": "latest"
+    "handlebars-layout": "latest"
   },
   "engines": {
     "node": "7.5.x"
