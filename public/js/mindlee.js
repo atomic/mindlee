@@ -28,10 +28,11 @@ function deleteActivity(e) {
     var activity_id = $activity.data('id');
 
     // AJAX
-    $.post('/delete_activity', function (data, status) {
-        console.log(activity_id);
+    $.post('/delete_activity', { id: activity_id}, function (req, res) {
+        console.log('client clicked delete, act_id :' + activity_id);
         $activity.fadeOut();
         $activity.remove();
+        // res.send();
     });
     console.log('User clicked delete activity');
 }

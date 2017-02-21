@@ -7,6 +7,7 @@ var express    = require('express');
 var http       = require('http');
 var path       = require('path');
 var handlebars = require('express3-handlebars');
+var bodyParser = require('body-parser');
 
 // Define all the views here
 var index = require('./routes/index');
@@ -50,6 +51,9 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: false}));
+//parse application/json
+// app.use(bodyParser.json());
 
 // development only
 if ('development' == app.get('env')) {
@@ -64,7 +68,9 @@ app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/add_activity'    , add_activity.addActivity);
-app.post('/delete_activity' , activities_json.removeActivity);
+
+var jsonParser = bodyParser.json();
+app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);

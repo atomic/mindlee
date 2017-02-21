@@ -11,7 +11,7 @@
 
         {{#with data}}
             {{#each activities}}
-                <div class="container activity" data-id={{id}}>
+                <div class="container activity" data-id={{@key}}>
                     <p>Title: {{ title }}</p>
                     <p class="act_date">Date: {{date}}</p>
                     <p class="act_time">Time: {{time}}</p>

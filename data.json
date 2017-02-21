@@ -1,19 +1,17 @@
 {
   "total_activities" : 2,
-  "activities" : [
-    {
-      "id" : 0,
+  "activities" : {
+    "0" : {
       "title" : "Quiz 4",
       "date" : "2017-02-15",
       "time" : "9:30",
       "stress_level" : "20"
     },
-    {
-      "id" : 1,
+    "1" : {
       "title" : "Work (Daily)",
       "date" : "2017-02-16",
       "time" : "3:00 PM",
       "stress_level" : "30"
     }
-  ]
+  }
 }
