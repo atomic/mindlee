@@ -31,7 +31,9 @@ function deleteActivity(e) {
     $.post('/delete_activity', { id: activity_id}, function (req, res) {
         console.log('client clicked delete, act_id :' + activity_id);
         $activity.fadeOut();
-        $activity.remove();
+        // $activity.setTimeout($activity.remove,300);
+        // window.location.reload();
+        // $activity.remove();
         // res.send();
     });
     console.log('User clicked delete activity');
