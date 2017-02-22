@@ -50,14 +50,20 @@ body {
 }
 
 .add-content {
+    margin-top: 20%;
+    border: solid 2px #bbbbbb;
+    border-radius: 33px;
+    padding: 3%;
     align-content: center;
     transform: translate(0%, 10%);
 }
 
 .activity {
     border: solid 2px #0b0b0b;
+    border-radius: 25px;
     align-content: center;
     margin: 10px;
+    padding: 3%;
 }
 
 .text-danger {
@@ -74,4 +80,10 @@ body {
 /*add activity page */
 #ex1Slider .slider-selection {
     background: #BABABA;
+}
+
+.btn-add-activity {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 }

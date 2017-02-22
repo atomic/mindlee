@@ -1,7 +1,7 @@
 <script type="text/javascript" src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
 <link rel="stylesheet"          href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css"    type="text/css" media="all">
 
-<div class="jumbotron main-content content container add-content bounceInUp">
+<div class="main-content content container add-content bounceInUp">
     <div class="schedule_header container">
         <h2>Your Activity</h2>
     </div>
@@ -30,8 +30,10 @@
             </div>
 
 
-            <a href="/schedule"> <input type="button" id="cancelAdd" class="btn btn-default" value="Cancel" action="/"/> </a>
-            <input type="submit" id="submitBtn" class="btn btn-default" value="Save"/>
+            <div class="text-center">
+                <a href="/schedule"> <input type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+                <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+            </div>
         </form>
     </div>
 </div>

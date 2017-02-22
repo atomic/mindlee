@@ -15,6 +15,7 @@ exports.removeActivity = function (req, res) {
     // TODO: implement the deletion here
 
     delete data.activities[req.body.id];
+    data.total_activities = data.total_activities - 1;
     console.log('(server) id to delete : ' + req.body.id);
     res.json(data.activities);
 };
