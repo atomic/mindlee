@@ -59,12 +59,43 @@ body {
     transform: translate(0%, 10%);
 }
 
+/*** Fade In for effects (see .activity) ***/
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .activity {
     border: solid 2px #0b0b0b;
     border-radius: 25px;
     align-content: center;
     margin: 10px;
     padding: 3%;
+
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
 }
 
 .text-danger {
@@ -89,7 +120,9 @@ body {
     margin-right: 10%;
 }
 
-/*Navigation CSS*/
+/***
+          Navigation  Section
+***/
 
 .nav-header-font {
     font-family: "Vibur";
@@ -106,7 +139,11 @@ body {
     font-size: 200%;
 }
 
-/*Homepage CSS*/
+button#hamburger {
+    margin-right: 25px;
+    margin-top: 25px;
+}
+/*          Homepage CSS            */
 .homepage-background {
     background-color: #ffffff;
 }
@@ -125,6 +162,3 @@ body {
     font-size: 200%;
     color: #91aa9d;
 }
-
-
-
