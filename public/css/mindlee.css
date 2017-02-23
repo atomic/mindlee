@@ -89,6 +89,42 @@ body {
     margin-right: 10%;
 }
 
-.cathyfont {
+/*Navigation CSS*/
+
+.nav-header-font {
+    font-family: "Vibur";
+    font-size: 400%;
+    color: #046380;
+}
+
+.navigation-font {
     font-family: "Oxygen";
 }
+
+.body-header-font {
+    font-family: "Oxygen";
+    font-size: 200%;
+}
+
+/*Homepage CSS*/
+.homepage-background {
+    background-color: #ffffff;
+}
+
+.homepage-greeting-font {
+    font-family: "Oxygen";
+    color: #3e606f;
+}
+
+.homepage-font {
+    font-family: "Oxygen";
+}
+
+.homepage-name-font {
+    font-family: "Oxygen";
+    font-size: 200%;
+    color: #91aa9d;
+}
+
+
+
