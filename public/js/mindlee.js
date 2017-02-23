@@ -11,6 +11,9 @@ $(document).ready(function() {
     $('.delete-btn').click(deleteActivity);
 
     // $("#date").valueAsDate = new Date();
+    $('div.activity').hover(function () {
+        // $(this).toggleClass('hvr-grow');
+    });
 });
 
 function initializePage() {

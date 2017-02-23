@@ -12,7 +12,7 @@
         {{#with data}}
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
-                    <div class="container activity" data-id={{@key}}>
+                    <div class="container activity hvr-grow" data-id={{@key}}>
                         <p>Title: {{ title }}</p>
                         <p class="act_date">Date: {{date}}</p>
                         <p class="act_time">Time: {{time}}</p>
