@@ -2,6 +2,6 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
-    console.log(data);
+    // console.log(data);
     res.render('schedule', {link:'/schedule', title: 'Schedule', 'data' : data} );
 };

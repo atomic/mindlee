@@ -55,15 +55,16 @@ function deleteActivity(e) {
 
 function showReminder() {
     // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
+    // var x = document.getElementById("snackbar");
+    var x = $('#snackbar');
+
 
     // Add the "show" class to DIV
-    x.className = "show";
+    x.addClass('show');
+    // x.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 55000);
+    // setTimeout(function(){ x.className = x.className.replace("show", ""); }, 55000);
+    setTimeout(function(){ x.toggleClass('show'); }, 6000);
 }
 
-function nextStressLevel(n) {
-    return n + (10 - n % 10);
-}

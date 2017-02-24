@@ -18,7 +18,7 @@ exports.addActivity = function (req, res) {
 
     var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level};
 
-    data.activities[total.toString()] = newact;
+    data.activities[total.toString() + 1] = newact;
 
     data.total_activities = total + 1;
     data.total_stress = total_stress + parseInt(stress_level);
