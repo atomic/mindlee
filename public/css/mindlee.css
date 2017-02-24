@@ -28,6 +28,10 @@ body {
     /*transform: translate(0%, 130%);*/
 }
 
+.contact-content{
+    padding-top:120px;
+}
+
 .schedule-content {
     transform: translate(0%, 35%);
 }
