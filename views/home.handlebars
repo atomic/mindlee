@@ -4,9 +4,12 @@
         </h2>
         <h2 class="homepage-name-font">Rob</h2>
 
+        {{#with data}}
         <div class="container stress-level">
             <h1 class="text-danger">
-                73
+                {{ total_stress }}
+                <!--TODO: this is temporary implementation, which sums all stress level-->
+                <!--implement a way to increment stress level later on when -->
             </h1>
             <div class="stress-note text-center homepage-font"text-center>
                 <h2> Your Stress Level </h2>
@@ -14,6 +17,7 @@
                 <strong class="text-primary">Take 10 deep breaths</strong>
             </div>
         </div>
+        {{/with}}
 
         <!--<div class="jumbotron">-->
         <!--</div>-->

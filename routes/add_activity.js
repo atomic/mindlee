@@ -8,7 +8,8 @@ var fs = require('fs');
 exports.addActivity = function (req, res) {
 
     //
-    var total = parseInt(data.total_activities);
+    var total        = parseInt(data.total_activities);
+    var total_stress = parseInt(data.total_stress);
 
     var title =         req.query["title"];
     var date =          req.query["date"];
@@ -20,6 +21,7 @@ exports.addActivity = function (req, res) {
     data.activities[total.toString()] = newact;
 
     data.total_activities = total + 1;
+    data.total_stress = total_stress + parseInt(stress_level);
 
     // console.log(data.activities);
     // fs.writeFile('../data.json', JSON.stringify(data), function (err) {

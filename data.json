@@ -1,5 +1,6 @@
 {
   "total_activities" : 2,
+  "total_stress": 50,
   "activities" : {
     "0" : {
       "title" : "Quiz 4",
