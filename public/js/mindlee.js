@@ -14,6 +14,15 @@ $(document).ready(function() {
     $('div.activity').hover(function () {
         // $(this).toggleClass('hvr-grow');
     });
+
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active');
+                $(this).parents('li').addClass('active');
+            }
+        });
+    });
 });
 
 function initializePage() {
