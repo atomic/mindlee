@@ -24,6 +24,7 @@ var contact         = require('./routes/contact'         ); // contact us form
 var help            = require('./routes/help'            ); // show help and faq about the app
 var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 var activities_json = require('./routes/activities_json');  // for ajax request data
+
 // Example route
 // var user = require('./routes/user');
 
