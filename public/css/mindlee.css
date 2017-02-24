@@ -143,8 +143,10 @@ body {
 }
 
 #navbar{
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: rgba(255, 255, 255, 0.9);
 }
+
 
 .navbar-default{
     background-color: rgba(0, 0, 0, 0);
@@ -201,3 +203,6 @@ div.page-header {
     filter: blur(50px);
 }
 
+.faq-content {
+    padding-top: 5em;
+}
