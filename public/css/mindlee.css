@@ -2,7 +2,8 @@
 
 
 body {
-    font-family: "Lato", sans-serif
+    font-family: "Lato", sans-serif;
+    background-color: #f2efdf;
 }
 
 .mySlides {
@@ -18,14 +19,6 @@ body {
     vertical-align: middle;
     position: relative;
     float: left;
-}
-
-.main-content {
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*margin-top: 120px;*/
-    padding-top: 120px;
-    /*transform: translate(0%, 130%);*/
 }
 
 .contact-content{
@@ -124,19 +117,42 @@ body {
     margin-right: 10%;
 }
 
+/* default CSS */
+
+.default-background{
+    background-color: #f2efdf;
+ }
+
+
+
+
+
 /***
           Navigation  Section
 ***/
+#mindlee-name{
+    padding-left: 5%;
+}
 
 .nav-header-font {
     font-family: "Vibur";
     font-size: 400%;
-    color: #046380;
+    color: #413659;
 }
 
 .navigation-font {
     font-family: "Oxygen";
 }
+
+#navbar{
+    background-color: #ffffff;
+}
+
+
+.navbar-default{
+    background-color: #f2efdf;
+}
+
 
 .body-header-font {
     font-family: "Oxygen";
@@ -149,7 +165,7 @@ button#hamburger {
 }
 /*          Homepage CSS            */
 .homepage-background {
-    background-color: #ffffff;
+    padding-top: 120px;
 }
 
 .homepage-greeting-font {
@@ -166,3 +182,4 @@ button#hamburger {
     font-size: 200%;
     color: #91aa9d;
 }
+
