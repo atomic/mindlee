@@ -17,9 +17,10 @@ body, html{
 }
 
 h1.title {
-    font-size: 50px;
-    font-family: 'Passion One', cursive;
+    font-size: 500%;
+    font-family: Vibur;
     font-weight: 400;
+    color: #413659;
 }
 
 hr{
@@ -52,10 +53,10 @@ input::-webkit-input-placeholder {
 }
 
 .main-center{
-    margin-top: 30px;
+    margin-top: 20px;
     margin: 0 auto;
     max-width: 330px;
-    padding: 40px 40px;
+    padding: 20px 30px;
 }
 
 .login-button{
@@ -63,8 +64,10 @@ input::-webkit-input-placeholder {
 }
 
 .login-register{
+    margin-top: 30px;
     font-size: 11px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .fullscreen-bg {
