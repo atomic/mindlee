@@ -14,5 +14,18 @@
       "time" : "3:00 PM",
       "stress_level" : "30"
     }
-  }
+  },
+
+  "advices" : [
+    { "priority" : "10", "message" : "Take 5 deep breaths"},
+    { "priority" : "20", "message" : "Take 10 deep breaths"},
+    { "priority" : "30", "message" : "Take 15 deep breaths"},
+    { "priority" : "30", "message" : "Listen to calm music for 10 minutes"},
+    { "priority" : "30", "message" : "Take a 10 minutes walk"},
+    { "priority" : "30", "message" : "Take a 10 minutes meditation"},
+    { "priority" : "50", "message" : "Do a 30 minutes Yoga Practice "},
+    { "priority" : "50", "message" : "Do outdoor exercise for 30 minutes"},
+    { "priority" : "500", "message" : "Schedule appointment with therapist"}
+  ]
+
 }

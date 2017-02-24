@@ -63,3 +63,7 @@ function showReminder() {
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 55000);
 }
+
+function nextStressLevel(n) {
+    return n + (10 - n % 10);
+}

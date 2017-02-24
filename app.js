@@ -10,8 +10,6 @@ var handlebars = require('express3-handlebars');
 var bodyParser = require('body-parser');
 
 // Define all the views here
-var index = require('./routes/index');
-
 var unimplemented = require('./routes/unimplemented');
 // Screens
 var login           = require('./routes/login'            ); // Login Screen
@@ -87,8 +85,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// testing
-app.get('/index'           , index.view);
 
 // Add routes here
 app.get('/'                , login.view);
