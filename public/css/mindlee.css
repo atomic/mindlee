@@ -95,11 +95,13 @@ body {
     /*animation: fadein 2s;*/
 }
 
-.text-danger {
+h1.text-danger {
     color: red;
-    border: solid 2px red;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    border: solid 19px rgba(255, 0, 0, 0.37);
+    border-radius: 58%;
+    margin: 50px 2em 30px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .stress-note {
