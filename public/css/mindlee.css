@@ -183,3 +183,9 @@ button#hamburger {
     color: #91aa9d;
 }
 
+div.page-header {
+    padding-bottom: 0%;
+    margin: 34px 0px 4px;
+    border-bottom: 0px solid #f7f7f7;
+    padding-top: 20%;
+}
