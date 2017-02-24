@@ -84,7 +84,6 @@ input::-webkit-input-placeholder {
     position: absolute;
     top: 0;
     left: 0;
-    width: 315%;
     height: 100%;
     opacity: 0.5;
 }
