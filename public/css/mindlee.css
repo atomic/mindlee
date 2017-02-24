@@ -124,14 +124,12 @@ body {
  }
 
 
-
-
-
 /***
           Navigation  Section
 ***/
-#mindlee-name{
-    padding-left: 5%;
+#mindlee-name {
+    text-align: center;
+    padding-left: 1em;
 }
 
 .nav-header-font {
@@ -148,11 +146,9 @@ body {
     background-color: #ffffff;
 }
 
-
 .navbar-default{
-    background-color: #f2efdf;
+    background-color: rgba(0, 0, 0, 0);
 }
-
 
 .body-header-font {
     font-family: "Oxygen";
@@ -170,7 +166,7 @@ button#hamburger {
 
 .homepage-greeting-font {
     font-family: "Oxygen";
-    color: #3e606f;
+    color: #422335;
 }
 
 .homepage-font {
@@ -180,7 +176,7 @@ button#hamburger {
 .homepage-name-font {
     font-family: "Oxygen";
     font-size: 200%;
-    color: #91aa9d;
+    color: #FFFFFF;
 }
 
 div.page-header {
