@@ -1,3 +1,21 @@
+<!--stuff for the circle radius bar-->
+<style type="text/css">
+
+    .clearfix:before,.clearfix:after {content: " "; display: table;}
+    .clearfix:after {clear: both;}
+    .clearfix {
+        *zoom: 1;
+        text-align: center;
+    }
+
+</style>
+<link rel="stylesheet" href="css/circle.css">
+<!--stuff for the circle radius bar-->
+
+
+
+
+
 <div class="container homepage-background">
         <h2 class="homepage-greeting-font">
             Good Afternoon,
@@ -5,12 +23,21 @@
         <h2 class="homepage-name-font">Rob</h2>
 
         {{#with data}}
-        <div class="container stress-level">
-            <h1 class="text-danger">
-                {{ total_stress }}
+        <div class="container stress-level center">
+            <div class="clearfix">
+                <div class="c100 p50 big green">
+                    <span>{{total_stress}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+            </div>
+            <!--<h1 class="text-danger">-->
+                <!--{{ total_stress }}-->
                 <!--TODO: this is temporary implementation, which sums all stress level-->
                 <!--implement a way to increment stress level later on when -->
-            </h1>
+            <!--</h1>-->
             <div class="stress-note text-center homepage-font"text-center>
                 <h2> Your Stress Level </h2>
                 <p>Hmm, it's a little high . . . </p>
