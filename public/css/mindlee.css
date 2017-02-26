@@ -208,3 +208,12 @@ div.page-header {
 .faq-content {
     padding-top: 5em;
 }
+
+.data-background {
+    /*margin-top: 10%;*/
+    /*padding-top: -100%;*/
+
+    border-radius: 3%;
+    height: 100vh;
+    background: rgba(250,250,250,0.71);
+}

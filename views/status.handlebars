@@ -1,5 +1,29 @@
-<div class="content main-content container jumbotron">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+
+<div class="container data-background">
+    <div class="page-header">
         <h2 class="h3 greeting">
             Status Screen
         </h2>
+
+        <div id="chartContainer">
+            <script type="text/javascript">
+                var svg = dimple.newSvg("#chartContainer", 590, 400);
+                d3.tsv("/data/example_data.tsv", function (data) {
+                    data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+                    var myChart = new dimple.chart(svg, data);
+                    myChart.setBounds(60, 30, 505, 305);
+                    var x = myChart.addCategoryAxis("x", "Month");
+                    x.addOrderRule("Date");
+                    myChart.addMeasureAxis("y", "Unit Sales");
+                    myChart.addSeries("Channel", dimple.plot.line);
+                    myChart.addLegend(60, 10, 500, 20, "right");
+                    myChart.draw();
+                });
+            </script>
+        </div>
+        <!-- TODO: put some data analytics here-->
+        <!--checkout : d3, dimple for samples-->
+    </div>
 </div>
