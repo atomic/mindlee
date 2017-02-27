@@ -9,6 +9,7 @@ exports.addActivity = function (req, res) {
 
     //
     var total        = parseInt(data.total_activities);
+    var next_id      = parseInt(data.next_activity_id);
     var total_stress = parseInt(data.total_stress);
 
     var title =         req.query["title"];
@@ -18,9 +19,10 @@ exports.addActivity = function (req, res) {
 
     var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level};
 
-    data.activities[total.toString() + 1] = newact;
+    data.activities[ data.next_activity_id ] = newact;
 
-    data.total_activities = total + 1;
+    data.total_activities++;
+    data.next_activity_id++;
     data.total_stress = total_stress + parseInt(stress_level);
 
     // console.log(data.activities);
