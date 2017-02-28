@@ -77,7 +77,8 @@ function checkDeletion(request, response) {
         console.log('client checking activities');
         console.log(deleted);
         if(deleted) {
-            location.reload();
+            // location.reload();
+            window.location.replace("/schedule");
         }
     });
 }
