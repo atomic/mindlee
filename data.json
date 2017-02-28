@@ -1,33 +1,63 @@
 {
-  "total_activities" : 2,
-  "next_activity_id" : 2,
-  "total_stress": 50,
-  "activities" : {
-    "0" : {
-      "title" : "Quiz 4",
-      "date" : "2017-02-15",
-      "time" : "9:30",
-      "stress_level" : "20"
-    },
-    "1" : {
-      "title" : "Work (Daily)",
-      "date" : "2017-02-16",
-      "time" : "3:00 PM",
-      "stress_level" : "30"
-    }
-  },
-
-  "advices" : [
-    { "priority" : "10", "message" : "Take 5 deep breaths"},
-    { "priority" : "20", "message" : "Take 10 deep breaths"},
-    { "priority" : "30", "message" : "Take 15 deep breaths"},
-    { "priority" : "40", "message" : "Listen to calm music for 10 minutes"},
-    { "priority" : "50", "message" : "Take a 10 minutes walk"},
-    { "priority" : "60", "message" : "Take a 10 minutes meditation"},
-    { "priority" : "70", "message" : "Do a 30 minutes Yoga Practice "},
-    { "priority" : "80", "message" : "Do outdoor exercise for 30 minutes"},
-    { "priority" : "90", "message" : "Do outdoor exercise for 30 minutes"},
-    { "priority" : "500", "message" : "Schedule appointment with therapist"}
-  ]
-
+	"total_activities": 2,
+	"next_activity_id": 4,
+	"total_stress": 80,
+	"activities": {
+		"2": {
+			"title": "Midterm",
+			"date": "2017-02-28",
+			"time": "10:00 AM",
+			"stress_level": "55",
+			"date_object": "2017-02-28T18:00:00.000Z"
+		},
+		"3": {
+			"title": "Study",
+			"date": "2017-02-28",
+			"time": "11:45 PM",
+			"stress_level": "25",
+			"date_object": "2017-03-01T07:45:00.000Z"
+		}
+	},
+	"advices": [
+		{
+			"priority": "10",
+			"message": "Take 5 deep breaths"
+		},
+		{
+			"priority": "20",
+			"message": "Take 10 deep breaths"
+		},
+		{
+			"priority": "30",
+			"message": "Take 15 deep breaths"
+		},
+		{
+			"priority": "40",
+			"message": "Listen to calm music for 10 minutes"
+		},
+		{
+			"priority": "50",
+			"message": "Take a 10 minutes walk"
+		},
+		{
+			"priority": "60",
+			"message": "Take a 10 minutes meditation"
+		},
+		{
+			"priority": "70",
+			"message": "Do a 30 minutes Yoga Practice "
+		},
+		{
+			"priority": "80",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "90",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "500",
+			"message": "Schedule appointment with therapist"
+		}
+	]
 }

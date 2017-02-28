@@ -4,7 +4,7 @@
 'use strict';
 
 
-$(document).ready(function() {
+$(document).ready(function(event) {
     initializePage();
 
     // With JQuery
@@ -25,6 +25,7 @@ $(document).ready(function() {
     });
 
     setTimeout(showReminder, 4000);
+    setTimeout(checkDeletion, 2000);
 });
 
 function initializePage() {
@@ -53,7 +54,7 @@ function deleteActivity(e) {
     console.log('User clicked delete activity');
 }
 
-function showReminder() {
+function showReminder(e) {
     // Get the snackbar DIV
     // var x = document.getElementById("snackbar");
     var x = $('#snackbar');
@@ -68,3 +69,15 @@ function showReminder() {
     setTimeout(function(){ x.toggleClass('show'); }, 6000);
 }
 
+// Function to ask server to check if there are activities to delete
+function checkDeletion(request, response) {
+    // e.preventDefault();
+    console.log('check deletion fired');
+    $.post('/check_activity', function (deleted) {
+        console.log('client checking activities');
+        console.log(deleted);
+        if(deleted) {
+            location.reload();
+        }
+    });
+}
