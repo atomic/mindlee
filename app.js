@@ -94,6 +94,7 @@ app.get('/add_activity'    , add_activity.addActivity);
 
 var jsonParser = bodyParser.json();
 app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
+app.post('/check_activity' ,  jsonParser, activities_json.checkActivity);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);

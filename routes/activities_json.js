@@ -2,6 +2,7 @@
  * Created by atomic on 2/16/17.
  */
 var data = require('../data.json');
+var fs = require("fs");
 
 exports.getJSON = function(req, res) {
     // get a random palette from the top ones
@@ -12,13 +13,39 @@ exports.getJSON = function(req, res) {
 
 exports.removeActivity = function (req, res) {
 
+    deleteActivity(req.body.id);
+    res.json(data.activities);
+};
 
-    let stress = data.activities[req.body.id].stress_level;
-    delete data.activities[req.body.id];
+exports.checkActivity = function (req, res) {
+
+    let now = new Date();
+    let deleted = false;
+    for (let act_id in data.activities) {
+        let x = new Date(data.activities[act_id].date_object);
+        let diff = new Date(now - x);
+        // console.log('now: ' + now.toDateString() + 'x: ' + x.toDateString());
+        // console.log('diff: ' + diff.getTime());
+        // console.log('minutes difference : ' + diff.getMinutes());
+        if(diff.getTime() > 0) {
+            deleteActivity(act_id);
+            deleted = true;
+        }
+    }
+    res.send(deleted);
+};
+
+function deleteActivity(id) {
+    let stress = data.activities[id].stress_level;
+    delete data.activities[id];
 
     data.total_activities--;
     data.total_stress = data.total_stress - stress;
 
-    console.log('(server) id to delete : ' + req.body.id);
-    res.json(data.activities);
-};
+    console.log('(server) id to delete : ' + id);
+
+    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('Activity is saved!');
+    });
+}
