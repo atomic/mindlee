@@ -2,15 +2,19 @@
 <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
 
 <style>
-    .axis path {
+    .axis path,
+    .axis line {
         fill: none;
-        stroke: #777;
+        stroke: black;
         shape-rendering: crispEdges;
     }
+
     .axis text {
-        font-family: Lato;
-        font-size: 13px;
+        font-family: sans-serif;
+        font-size: 11px;
     }
+
+
 </style>
 
 <div class="container data-background">
@@ -65,13 +69,14 @@
                         .y(function(d) {
                             return yScale(d.stress_level);
                         })
-                        .interpolate("basis");
+                        .interpolate("linear");
 
                 vis.append('svg:path')
                         .attr('d', line(hist))
                         .attr('stroke', 'blue')
                         .attr('stroke-width', 2)
                         .attr('fill', 'none');
+
 
                 // now rotate text on x axis
                 // solution based on idea here: https://groups.google.com/forum/?fromgroups#!topic/d3-js/heOBPQF3sAY
