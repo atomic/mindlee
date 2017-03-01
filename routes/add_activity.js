@@ -28,7 +28,7 @@ exports.addActivity = function (req, res) {
 
     data.total_activities++;
     data.next_activity_id++;
-    data.total_stress = total_stress + parseInt(stress_level);
+    // data.total_stress = total_stress + parseInt(stress_level);
 
     // console.log(data.activities);
     // fs.writeFile('../data.json', JSON.stringify(data), function (err) {
