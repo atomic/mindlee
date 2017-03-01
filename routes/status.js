@@ -1,8 +1,8 @@
 /**
  * Created by atomic on 2/9/17.
  */
-var data = require('../data.json');
+var hist = require('../history.json');
 
 exports.view = function(req, res){
-    res.render('status', { link:'/status', title: 'Status'});
+    res.render('status', { link:'/status', title: 'Status', 'hist': hist});
 };

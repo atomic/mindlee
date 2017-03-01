@@ -14,6 +14,9 @@
         font-size: 11px;
     }
 
+    .activity {
+        font-size: 1em;
+    }
 
 </style>
 
@@ -22,6 +25,15 @@
     <div class="jumbotron">
 
         <svg id="visualisation" width="1000" height="500"></svg>
+        {{#each hist}}
+            <div class="container activity hvr-grow">
+                <p>Title: {{ title }}</p>
+                <p class="act_date">Date: {{date}}</p>
+                <p class="act_time">Time: {{time}}</p>
+                <p class="stress_level">Stress Level: {{stress_level}}</p>
+                <p class="total_stress">Total stress: {{total_stress}}</p>
+            </div>
+        {{/each}}
         <script>
             function InitChart(hist) {
 
