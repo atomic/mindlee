@@ -22,7 +22,7 @@ var contact         = require('./routes/contact'         ); // contact us form
 var help            = require('./routes/help'            ); // show help and faq about the app
 var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 var activities_json = require('./routes/activities_json');  // for ajax request data
-var newpage = require('./routes/newpage');
+var destress        = require('./routes/destress');
 
 // Example route
 // var user = require('./routes/user');
@@ -106,7 +106,7 @@ app.get('/help'             , help.view);
 app.get('/contact_confirm' , unimplemented.view);
 app.get('/error'            , unimplemented.view);
 
-app.get('/newpage'          , newpage.view);
+app.get('/destress'          , destress.view);
 // Example route
 // app.get('/users', user.list);
 
