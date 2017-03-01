@@ -1,6 +1,6 @@
 {
 	"total_activities": 1,
-	"next_activity_id": 2,
+	"next_activity_id": 7,
 	"total_stress": 25,
 	"activities": {
 		"1": {
@@ -52,15 +52,5 @@
 			"priority": "500",
 			"message": "Schedule appointment with therapist"
 		}
-	],
-	"history" : [
-      {"Date": "01-03-2013", "Views": "a", "Owner":"Alpha","Rating":"****"},
-      {"Date": "05-03-2013", "Views": "b", "Owner":"Beta","Rating":"****"},
-      {"Date": "09-03-2013", "Views": "c", "Owner":"Gamma","Rating":"**"},
-      {"Date": "13-03-2013", "Views": "d", "Owner":"Beta","Rating":"****"},
-      {"Date": "01-04-2013", "Views": "a", "Owner":"Theta","Rating":"****"},
-      {"Date": "05-04-2013", "Views": "b", "Owner":"Beta","Rating":"***"},
-      {"Date": "09-04-2013", "Views": "c", "Owner":"Theta","Rating":"**"},
-      {"Date": "13-04-2013", "Views": "d", "Owner":"Beta","Rating":"*"}
-    ]
+	]
 }

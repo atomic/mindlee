@@ -42,6 +42,10 @@ exports.getHistory = function (req, res) {
 
 function deleteActivity(id) {
     let stress = data.activities[id].stress_level;
+    // let title = data.activities[id].title;
+    // let date   = new Date(data.activities[id].date_object);
+    hist.push( data.activities[id] );
+
     delete data.activities[id];
 
     data.total_activities--;
@@ -50,6 +54,11 @@ function deleteActivity(id) {
     console.log('(server) id to delete : ' + id);
 
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('Activity is saved!');
+    });
+
+    fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
         if (err) throw err;
         console.log('Activity is saved!');
     });
