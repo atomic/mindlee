@@ -12,7 +12,7 @@
                 <label for="title">Title:</label>
                 <input type="text" class="form-control" id="title" placeholder="Activity name" name="title" value="" required="true">
             </div>
-            <div class="form-group">
+            <div class="form-group bootstrap-timepicker">
                 <label for="date">Date:</label>
                 <input type="date" class="form-control" id="date" placeholder="Date" name="date" value="" required="true">
             </div>
@@ -20,7 +20,7 @@
             <!--add time with bootstrap-timepicker-->
             <div class="form-group bootstrap-timepicker timepicker">
                 <label for="time"> Time: </label>
-                <input name="time" id="time" type="text" class="form-control" value="14:00" required="true" title="time">
+                <input name="time" id="time" type="text" onkeydown="return false;" class="form-control" value="" required="true" title="time">
             </div>
 
             <div class="alert alert-danger" id="date_warning" hidden="true">
@@ -47,7 +47,12 @@
 
 <script type="text/javascript">
     $('#time').timepicker( {
-        showInputs: false
+        showInputs: false,
+        minuteStep: 5,
+        defaultTime: 'current',
+        disableMousewheel: 'false',
+        disableFocus: true,
+        explicitMode: true
     });
 
     // With JQuery
