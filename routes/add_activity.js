@@ -20,6 +20,7 @@ exports.addActivity = function (req, res) {
     // the date object from the activity
     var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
 
+    let now = new Date();
 
     var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": date_obj};
 
