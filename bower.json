@@ -20,6 +20,8 @@
   "dependencies": {
     "bootstrap-timepicker": "^0.5.2",
     "seiyria-bootstrap-slider": "^9.7.2",
-    "hover": "Hover#^2.1.0"
+    "hover": "Hover#^2.1.0",
+    "d3": "^4.7.0",
+    "dimple": "^2.3.0"
   }
 }

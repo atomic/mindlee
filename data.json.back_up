@@ -1,1 +1,66 @@
-{"total_activities":3,"next_activity_id":4,"total_stress":100,"activities":{"1":{"title":"Coffee","date":"2017-02-16","time":"12:00 AM","stress_level":"20","date_object":"2017-02-16T08:00:00.000Z"},"2":{"title":"Midterm","date":"2017-02-28","time":"10:00 AM","stress_level":"55","date_object":"2017-02-28T18:00:00.000Z"},"3":{"title":"Study","date":"2017-02-28","time":"11:45 PM","stress_level":"25","date_object":"2017-03-01T07:45:00.000Z"}},"advices":[{"priority":"10","message":"Take 5 deep breaths"},{"priority":"20","message":"Take 10 deep breaths"},{"priority":"30","message":"Take 15 deep breaths"},{"priority":"40","message":"Listen to calm music for 10 minutes"},{"priority":"50","message":"Take a 10 minutes walk"},{"priority":"60","message":"Take a 10 minutes meditation"},{"priority":"70","message":"Do a 30 minutes Yoga Practice "},{"priority":"80","message":"Do outdoor exercise for 30 minutes"},{"priority":"90","message":"Do outdoor exercise for 30 minutes"},{"priority":"500","message":"Schedule appointment with therapist"}]}
+{
+	"total_activities": 1,
+	"next_activity_id": 2,
+	"total_stress": 25,
+	"activities": {
+		"1": {
+			"title": "Study",
+			"date": "2017-02-28",
+			"time": "11:45 PM",
+			"stress_level": "25",
+			"date_object": "2017-03-01T07:45:00.000Z"
+		}
+	},
+	"advices": [
+		{
+			"priority": "10",
+			"message": "Take 5 deep breaths"
+		},
+		{
+			"priority": "20",
+			"message": "Take 10 deep breaths"
+		},
+		{
+			"priority": "30",
+			"message": "Take 15 deep breaths"
+		},
+		{
+			"priority": "40",
+			"message": "Listen to calm music for 10 minutes"
+		},
+		{
+			"priority": "50",
+			"message": "Take a 10 minutes walk"
+		},
+		{
+			"priority": "60",
+			"message": "Take a 10 minutes meditation"
+		},
+		{
+			"priority": "70",
+			"message": "Do a 30 minutes Yoga Practice "
+		},
+		{
+			"priority": "80",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "90",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "500",
+			"message": "Schedule appointment with therapist"
+		}
+	],
+	"history" : [
+      {"Date": "01-03-2013", "Views": "a", "Owner":"Alpha","Rating":"****"},
+      {"Date": "05-03-2013", "Views": "b", "Owner":"Beta","Rating":"****"},
+      {"Date": "09-03-2013", "Views": "c", "Owner":"Gamma","Rating":"**"},
+      {"Date": "13-03-2013", "Views": "d", "Owner":"Beta","Rating":"****"},
+      {"Date": "01-04-2013", "Views": "a", "Owner":"Theta","Rating":"****"},
+      {"Date": "05-04-2013", "Views": "b", "Owner":"Beta","Rating":"***"},
+      {"Date": "09-04-2013", "Views": "c", "Owner":"Theta","Rating":"**"},
+      {"Date": "13-04-2013", "Views": "d", "Owner":"Beta","Rating":"*"}
+    ]
+}

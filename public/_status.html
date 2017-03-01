@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Status Charts with d3</title>
+    <!-- Index-Page-CSS --> <link rel="stylesheet" href="css/style.css" 		type="text/css" media="all">
+    <!-- Animate.CSS --> 	<link rel="stylesheet" href="css/animate.css" 		type="text/css" media="all">
+    <link rel="stylesheet" href="css/mindlee.css"       type="text/css" media="all">
+    <link rel="stylesheet" href="css/snackbar.css"       type="text/css" media="all">
+
+    <!--bower stuff-->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+</head>
+<body>
+
+
+<div class="container data-background">
+    <div class="page-header">
+        <h2 class="h3 greeting">
+            Status Screen
+        </h2>
+
+        <div id="chartContainer">
+            <script type="text/javascript">
+                var svg = dimple.newSvg("#chartContainer", 400, 400);
+                console.log('test tes test');
+                d3.json("/data/history.json", function (data) {
+                    // Add an svg object to the body element
+                    var svg = dimple.newSvg("body", 1200, 800);
+                    // Create a new chart object based on this data and svg
+                    var myChart = new dimple.chart(svg, data);
+                });
+//                d3.tsv("/data/example_data.tsv", function (data) {
+//                    data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+//                    var myChart = new dimple.chart(svg, data);
+//                    myChart.setBounds(60, 30, 505, 305);
+//                    var x = myChart.addCategoryAxis("x", "Date");
+//                    x.addOrderRule("Date");
+//                    myChart.addMeasureAxis("y", "Unit Sales");
+//                    var s = myChart.addSeries(null, dimple.plot.area);
+//                    myChart.draw();
+//                });
+            </script>
+        </div>
+        <!-- TODO: put some data analytics here-->
+        <!--checkout : d3, dimple for samples-->
+    </div>
+</div>
+</body>
+
+</html>

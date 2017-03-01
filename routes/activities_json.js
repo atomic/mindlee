@@ -2,6 +2,7 @@
  * Created by atomic on 2/16/17.
  */
 var data = require('../data.json');
+var hist = require('../history.json');
 var fs = require("fs");
 
 exports.getJSON = function(req, res) {
@@ -33,6 +34,10 @@ exports.checkActivity = function (req, res) {
         }
     }
     res.send(deleted);
+};
+
+exports.getHistory = function (req, res) {
+    res.json(hist);
 };
 
 function deleteActivity(id) {
