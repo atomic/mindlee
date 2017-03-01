@@ -218,3 +218,10 @@ div.page-header {
     background: rgba(250,250,250,0.71);
 }
 
+
+/*schedule page css*/
+
+/*fixing "go to stress level button placement*/
+.btn-group-justified{ /*bootstrap class extended*/
+    padding-top:3em;
+}
