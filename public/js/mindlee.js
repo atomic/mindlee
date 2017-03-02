@@ -13,6 +13,7 @@ $(document).ready(function(event) {
 
     // for destress page
     $(".btn-destress-delete").click(deleteDestressActivity);
+    $(".btn-do").click(doDestress);
 
     // $("#date").valueAsDate = new Date();
     $('div.activity').hover(function () {
@@ -68,6 +69,16 @@ function deleteDestressActivity(e) {
         $de_activity.fadeOut();
     });
 
+}
+
+function doDestress(e) {
+    e.preventDefault();
+    let $de_activity = $(this).closest('.activity');
+    let destress_value = -(parseInt($de_activity.find('p.text-reduce').text()));
+    $.post('/do_destress', { value: destress_value } , function (req, res) {
+        console.log('destress complete');
+    });
+    window.location.replace("/home");
 }
 
 function showReminder(e) {

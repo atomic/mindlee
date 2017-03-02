@@ -50,6 +50,15 @@ exports.removeDestress = function (req, res) {
     res.json(destress);
 };
 
+exports.doDestress = function (req, res) {
+    let val = parseInt(req.body.value);
+    data.total_stress = data.total_stress - val;
+    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('Activity is saved!');
+    });
+};
+
 exports.getHistory = function (req, res) {
     res.json(hist);
 };
@@ -78,7 +87,7 @@ function deleteActivity(id, safe) {
         console.log('Activity is saved!');
     });
 
-    fs.writefile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
+    fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
         if (err) throw err;
         console.log('activity is saved!');
     });

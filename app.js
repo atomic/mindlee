@@ -100,6 +100,7 @@ app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
 app.post('/check_activity'  , jsonParser, activities_json.checkActivity);
 app.get( '/get_history'     , jsonParser, activities_json.getHistory);
 app.post('/delete_destress_activity' , jsonParser, activities_json.removeDestress);
+app.post('/do_destress'     , jsonParser, activities_json.doDestress);
 
 app.get('/schedule'        , schedule.view);
 app.get('/status'           , status.view);
