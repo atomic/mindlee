@@ -23,6 +23,7 @@ var help            = require('./routes/help'            ); // show help and faq
 var contact_confirm = require('./routes/contact_confirm' ); // confirmation of contact
 var activities_json = require('./routes/activities_json');  // for ajax request data
 var destress        = require('./routes/destress');
+var thanks          = require('./routes/thanks');           //Thank You Page after contact
 
 // Example route
 // var user = require('./routes/user');
@@ -92,6 +93,7 @@ app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/add'             , add.view);
 app.get('/add_activity'    , add_activity.addActivity);
+app.get('/thanks'          , thanks.view    );
 
 var jsonParser = bodyParser.json();
 app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
