@@ -1,6 +1,46 @@
+<style>
+    #destress_container {
+        padding-top: 20%;
+    }
+    .text-reduce {
+        font-weight: bold;
+        color: #d21111;
+    }
+
+    #new_activity {
+        background-color: rgba(100,227,221,0.23);
+    }
+</style>
 
 
-
-<h1>
-    This is temporary page for destress techniques
-</h1>
+<div class="schedule_body w3-layout-container" id="destress_container">
+    {{#each destress}}
+        <div class="container activity hvr-glow">
+            <div class="row">
+                <p class="col-xs-6 ">{{ message }}</p>
+                <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                <div class="text-right col-xs-4">
+                    <button class="btn btn-success">Do</button>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    {{#each destress_costum}}
+        <div class="container activity hvr-grow">
+            <div class="row">
+                <p class="col-xs-6 ">{{ message }}</p>
+                <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                <div class="text-right col-xs-2">
+                    <button class="btn btn-success">Do</button>
+                    <!--button is hooked to POST request in mindlee.js-->
+                </div>
+                <div class="text-right col-xs-2">
+                    <button class="btn delete-btn btn-danger">Delete</button>
+                    <!--button is hooked to POST request in mindlee.js-->
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    <a id="new_activity" href="#" class="container activity center-block text-center text-center hvr-glow">
+        Add new Activity</a>
+</div>

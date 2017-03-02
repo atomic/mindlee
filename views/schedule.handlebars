@@ -1,6 +1,6 @@
 <div class="main-content container">
 
-    <div class="container page-header">
+    <div class="row container page-header">
         <label class="col-md-8" for="">Your Schedules</label>
         <form class="col-md-1" action="/add" style="float: right">
             <button class="btn-block btn-group-lg"><img type="submit" class="plus" src="images/plus.svg" alt=""></button>
@@ -12,7 +12,7 @@
         {{#with data}}
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
-                    <div class="container activity hvr-grow" data-id={{@key}}>
+                    <div class="container activity hvr-glow hvr-sweep-to-left" data-id={{@key}}>
                         <p>Title: {{ title }}</p>
                         <p class="act_date">Date: {{date}}</p>
                         <p class="act_time">Time: {{time}}</p>
