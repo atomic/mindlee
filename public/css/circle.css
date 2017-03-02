@@ -258,7 +258,7 @@
   top: 0;
   line-height: 5em;
   font-size: 0.2em;
-  color: #1e8b2c;
+  color: #ffffff; /*changed color*/
   display: block;
   text-align: center;
   white-space: nowrap;
@@ -1037,17 +1037,17 @@
 }
 .c100.green .bar,
 .c100.green .fill {
-  border-color: #4db53c !important;
+  border-color: #2bbfbe !important; /*changed color*/
 }
 .c100.green:hover > span {
-  color: #4db53c;
+  color: #2bbfbe; /*changed color */
 }
 .c100.green.dark .bar,
 .c100.green.dark .fill {
-  border-color: #5fd400 !important;
+  border-color: #00c7c9 !important; /*changed color*/
 }
 .c100.green.dark:hover > span {
-  color: #5fd400;
+  color: #00c7c9; /*changed color*/
 }
 .c100.orange .bar,
 .c100.orange .fill {
