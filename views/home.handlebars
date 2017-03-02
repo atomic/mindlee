@@ -8,6 +8,16 @@
         text-align: center;
     }
 
+    #stress_msg_1 {
+    }
+    #stress_msg_2 {
+        font-size: 1.5em;
+    }
+    #btn_destress {
+        margin-top: 3%;
+        background-color: #0bb46d;
+        border-color: #0bb46d;
+    }
 </style>
 <link rel="stylesheet" href="css/circle.css">
 <!--stuff for the circle radius bar-->
@@ -33,15 +43,11 @@
                     </div>
                 </div>
             </div>
-            <!--<h1 class="text-danger">-->
-                <!--{{ total_stress }}-->
-                <!--TODO: this is temporary implementation, which sums all stress level-->
-                <!--implement a way to increment stress level later on when -->
-            <!--</h1>-->
             <div class="stress-note text-center homepage-font"text-center>
-                <h2> Your Stress Level </h2>
-                <p>Hmm, it's a little high . . . </p>
-                <strong class="text-primary">{{choose ../message "Take 10 deep breaths"}}</strong>
+                <h2 id="stress_msg_1"> Your Stress Level </h2>
+                <p id="stress_msg_2">Hmm, it's a little high . . . </p>
+                <!--<strong class="text-primary">{{choose ../message "Take 10 deep breaths"}}</strong>-->
+                <a id="btn_destress" href="/destress" class="btn btn-primary btn-lg">De-stress</a>
             </div>
         </div>
         {{/with}}
@@ -49,12 +55,7 @@
         <!--<div class="jumbotron">-->
         <!--</div>-->
 
-
-        <a href="/schedule">
-            <button class="btn-block btn-group-justified">
-                Go to schedule
-            </button>
-        </a>
+    <a href="/schedule" class="btn-block btn btn-primary btn-lg">Go to schedule</a>
 
     <!-- Use a button to open the snackbar -->
     <!--<button onclick="showReminder()">Show Snackbar</button>-->
