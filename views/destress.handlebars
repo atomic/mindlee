@@ -27,16 +27,16 @@
             </div>
         {{/each}}
         {{#each custom}}
-            <div class="container activity hvr-grow">
+            <div class="container activity hvr-glow">
                 <div class="row">
-                    <p class="col-xs-6 ">{{ message }}</p>
+                    <p class="col-xs-6 d-message">{{ message }}</p>
                     <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
                     <div class="text-right col-xs-2">
                         <button class="btn btn-success">Do</button>
                         <!--button is hooked to POST request in mindlee.js-->
                     </div>
                     <div class="text-right col-xs-2">
-                        <button class="btn delete-btn btn-danger">Delete</button>
+                        <button class="btn btn-destress-delete btn-danger">Delete</button>
                         <!--button is hooked to POST request in mindlee.js-->
                     </div>
                 </div>

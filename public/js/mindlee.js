@@ -8,7 +8,11 @@ $(document).ready(function(event) {
     initializePage();
 
     // With JQuery
+    // for activity page
     $('.delete-btn').click(deleteActivity);
+
+    // for destress page
+    $(".btn-destress-delete").click(deleteDestressActivity);
 
     // $("#date").valueAsDate = new Date();
     $('div.activity').hover(function () {
@@ -39,19 +43,31 @@ function deleteActivity(e) {
     e.preventDefault();
 
     var $activity = $(this).closest('.activity');
-    var $schedule_body = $('#schedule_body');
     var activity_id = $activity.data('id');
 
     // AJAX
     $.post('/delete_activity', { id: activity_id}, function (req, res) {
         console.log('client clicked delete, act_id :' + activity_id);
         $activity.fadeOut();
-        // $activity.setTimeout($activity.remove,300);
-        // window.location.reload();
-        // $activity.remove();
-        // res.send();
     });
     console.log('User clicked delete activity');
+}
+
+function deleteDestressActivity(e) {
+    e.preventDefault();
+
+    let $de_activity = $(this).closest('.activity');
+    let $destress_message = $de_activity.find('p.d-message');
+    console.log($destress_message.text());
+    let msg = $destress_message.text();
+
+
+    console.log('message(client): ' + msg);
+    $.post('/delete_destress_activity' , { message: msg}, function (req, res) {
+        console.log('client clicked delete destress.');
+        $de_activity.fadeOut();
+    });
+
 }
 
 function showReminder(e) {

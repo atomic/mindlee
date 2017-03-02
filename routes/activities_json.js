@@ -3,6 +3,7 @@
  */
 var data = require('../data.json');
 var hist = require('../history.json');
+var destress = require('../destress.json');
 var fs = require("fs");
 
 exports.getJSON = function(req, res) {
@@ -17,6 +18,7 @@ exports.removeActivity = function (req, res) {
     deleteActivity(req.body.id, true);
     res.json(data.activities);
 };
+
 
 exports.checkActivity = function (req, res) {
 
@@ -34,6 +36,18 @@ exports.checkActivity = function (req, res) {
         }
     }
     res.send(deleted);
+};
+
+exports.removeDestress = function (req, res) {
+    console.log('message : ' + req.body.message);
+    destress.custom = destress.custom.filter(function(e){
+        return e.message != req.body.message;
+    });
+    fs.writeFile('destress.json', JSON.stringify(destress, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('destress activity: [' + req.body.message + ']  is saved!');
+    });
+    res.json(destress);
 };
 
 exports.getHistory = function (req, res) {
@@ -64,8 +78,8 @@ function deleteActivity(id, safe) {
         console.log('Activity is saved!');
     });
 
-    fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
+    fs.writefile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
         if (err) throw err;
-        console.log('Activity is saved!');
+        console.log('activity is saved!');
     });
 }
