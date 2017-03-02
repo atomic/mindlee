@@ -21,8 +21,8 @@ $(document).ready(function(event) {
                 $(this).addClass('active');
                 $(this).parents('li').addClass('active');
             }
-
-
+        });
+    });
 
     setTimeout(showReminder, 4000);
     setTimeout(checkDeletion, 2000);
