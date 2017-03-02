@@ -14,33 +14,40 @@
 
 
 <div class="schedule_body w3-layout-container" id="destress_container">
-    {{#each destress}}
-        <div class="container activity hvr-glow">
-            <div class="row">
-                <p class="col-xs-6 ">{{ message }}</p>
-                <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
-                <div class="text-right col-xs-4">
-                    <button class="btn btn-success">Do</button>
+    {{#with destress}}
+        {{#each default}}
+            <div class="container activity hvr-glow">
+                <div class="row">
+                    <p class="col-xs-6 ">{{ message }}</p>
+                    <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                    <div class="text-right col-xs-4">
+                        <button class="btn btn-success">Do</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    {{/each}}
-    {{#each destress_costum}}
-        <div class="container activity hvr-grow">
-            <div class="row">
-                <p class="col-xs-6 ">{{ message }}</p>
-                <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
-                <div class="text-right col-xs-2">
-                    <button class="btn btn-success">Do</button>
-                    <!--button is hooked to POST request in mindlee.js-->
-                </div>
-                <div class="text-right col-xs-2">
-                    <button class="btn delete-btn btn-danger">Delete</button>
-                    <!--button is hooked to POST request in mindlee.js-->
+        {{/each}}
+        {{#each custom}}
+            <div class="container activity hvr-grow">
+                <div class="row">
+                    <p class="col-xs-6 ">{{ message }}</p>
+                    <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                    <div class="text-right col-xs-2">
+                        <button class="btn btn-success">Do</button>
+                        <!--button is hooked to POST request in mindlee.js-->
+                    </div>
+                    <div class="text-right col-xs-2">
+                        <button class="btn delete-btn btn-danger">Delete</button>
+                        <!--button is hooked to POST request in mindlee.js-->
+                    </div>
                 </div>
             </div>
-        </div>
-    {{/each}}
+        {{/each}}
+    {{/with}}
     <a id="new_activity" href="#" class="container activity center-block text-center text-center hvr-glow">
-        Add new Activity</a>
+        Add new de-stress activity</a>
 </div>
+
+
+<script>
+    $("#new_activity").click
+</script>
