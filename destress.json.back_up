@@ -1,0 +1,46 @@
+{
+  "default": [
+    {
+      "stress_reduce": "10",
+      "message": "Take 5 deep breaths"
+    },
+    {
+      "stress_reduce": "20",
+      "message": "Take 10 deep breaths"
+    },
+    {
+      "stress_reduce": "30",
+      "message": "Take 15 deep breaths"
+    },
+    {
+      "stress_reduce": "40",
+      "message": "Listen to calm music for 10 minutes"
+    },
+    {
+      "stress_reduce": "50",
+      "message": "Take a 10 minutes walk"
+    },
+    {
+      "stress_reduce": "60",
+      "message": "Take a 10 minutes meditation"
+    },
+    {
+      "stress_reduce": "70",
+      "message": "Do a 30 minutes Yoga Practice "
+    },
+    {
+      "stress_reduce": "80",
+      "message": "Do outdoor exercise for 30 minutes"
+    },
+    {
+      "stress_reduce": "90",
+      "message": "Do outdoor exercise for 30 minutes"
+    }
+  ],
+  "custom": [
+    {
+      "stress_reduce": "500",
+      "message": "Schedule appointment with therapist"
+    }
+  ]
+}

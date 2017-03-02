@@ -106,7 +106,9 @@ app.get('/help'             , help.view);
 app.get('/contact_confirm' , unimplemented.view);
 app.get('/error'            , unimplemented.view);
 
-app.get('/destress'          , destress.view);
+app.get('/destress'             , destress.view);
+app.get('/add_destress'         , destress.add);
+app.get('/add_destress_activity', destress.addDestress);
 // Example route
 // app.get('/users', user.list);
 
