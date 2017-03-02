@@ -14,26 +14,21 @@
         font-size: 11px;
     }
 
-    .activity {
-        font-size: 1em;
+    .past-activity {
+        background-color: #0bb46d;
     }
 
+    .main-content {
+        margin-top: 13%;
+        margin-left: 20%;
+        padding-bottom: -30%;
+    }
 </style>
 
 <div class="container data-background">
 
-    <div class="jumbotron">
-
+    <div class="container main-content">
         <svg id="visualisation" width="1000" height="500"></svg>
-        {{#each hist}}
-            <div class="container activity hvr-grow">
-                <p>Title: {{ title }}</p>
-                <p class="act_date">Date: {{date}}</p>
-                <p class="act_time">Time: {{time}}</p>
-                <p class="stress_level">Stress Level: {{stress_level}}</p>
-                <p class="total_stress">Total stress: {{total_stress}}</p>
-            </div>
-        {{/each}}
         <script>
             function InitChart(hist) {
 
@@ -111,4 +106,13 @@
             getHistory();
         </script>
     </div>
+    {{#each hist}}
+        <div class="container activity hvr-glow past-activity">
+            <p>Title: {{ title }}</p>
+            <p class="act_date">Date: {{date}}</p>
+            <p class="act_time">Time: {{time}}</p>
+            <p class="stress_level">Stress Level: {{stress_level}}</p>
+            <p class="total_stress">Total stress: {{total_stress}}</p>
+        </div>
+    {{/each}}
 </div>

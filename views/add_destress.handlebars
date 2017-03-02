@@ -1,0 +1,87 @@
+<script type="text/javascript" src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+<link rel="stylesheet"          href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css"    type="text/css" media="all">
+
+
+<div class="main-content content container add-content bounceInUp">
+    <div class="schedule_header container">
+        <h2>Your Activity</h2>
+    </div>
+    <div class="schedule_body w3layouts">
+        <form id="addActivityForm" role="form" method="get" action="/add_activity">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Activity name" name="title" value="" required="true">
+            </div>
+            <div class="form-group bootstrap-timepicker">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" placeholder="Date" name="date" value="" required="true">
+            </div>
+
+            <!--add time with bootstrap-timepicker-->
+            <div class="form-group bootstrap-timepicker timepicker">
+                <label for="time"> Time: </label>
+                <input name="time" id="time" type="text" onkeydown="return false;" class="form-control" value="" required="true" title="time">
+            </div>
+
+            <div class="alert alert-danger" id="date_warning" hidden="true">
+                Please input time of activity for the future
+            </div>
+
+
+            <div class="form-group text-center">
+                <h4 class="panel-title">Stress Level</h4>
+                    <input type="range" class="col-md-4 form-control" id="stress_level" value=50 name="stress_level" required="true" title="Stress Level" data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+                <div class="">
+                    "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
+                </div>
+            </div>
+
+
+            <div class="text-center">
+                <a href="/schedule"> <input type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+                <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#time').timepicker( {
+        showInputs: false,
+        minuteStep: 5,
+        defaultTime: 'current',
+        disableMousewheel: 'false',
+        disableFocus: true,
+        explicitMode: true
+    });
+
+    // With JQuery
+    $('#stress_level').slider({
+        formatter: function(value) {
+            return 'Current value: ' + value;
+        }
+    });
+
+
+    $("#date").on("change", checkValidTime);
+    $("#time").on("change", checkValidTime);
+
+    function checkValidTime() {
+        var timeformat = $("#date").val().replace(/-/g, "/") + ' ' + $("#time").val();
+        console.log(timeformat);
+        var mydate = new Date( timeformat );
+        let now = new Date();
+        console.log('date changed : ' + $("#date").val() + '  , date: ' + mydate);
+        console.log('now : ' + now);
+        console.log(now - mydate);
+        if (now - mydate >= 0) {
+//            alert("Please enter future date");
+            $("#date_warning").show();
+            if ($(this).is("#date")) {
+                $("#date").val("mm/dd/yyyy");
+            }
+        } else {
+            $("#date_warning").hide();
+        }
+    }
+</script>
