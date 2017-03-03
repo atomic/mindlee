@@ -96,9 +96,15 @@ app.get('/home'            , home.view);
 app.get('/add'             , jsonParser, add.add_view);
 app.get('/edit'            , jsonParser, add.edit_view);
 
+// A/B Testing  routes
+app.get('/add_A'             , jsonParser, add.add_view);
+app.get('/add_B'             , jsonParser, add.add_view_B);
+// end of A/B testing route
+
 app.get('/add_activity'    , jsonParser, activity.addActivity);
 app.get('/edit_activity'    , jsonParser, activity.editActivity);
 app.get('/thanks'          , thanks.view    );
+
 
 app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
 app.post('/check_activity'  , jsonParser, activities_json.checkActivity);

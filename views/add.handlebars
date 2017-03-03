@@ -52,17 +52,44 @@
 
 
             <div class="form-group text-center">
-                <h4 class="panel-title">Stress Level</h4>
+                <h4 class="panel-title text-danger">Stress Level</h4>
                 {{#if is_edit}}
                     {{#with activity}}
-                        <input type="range" class="col-md-4 form-control" id="stress_level" value={{stress_level}} name="stress_level" required="true" title="Stress Level" data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="{{stress_level}}"/>
+                        <input type="range" class="col-md-4 form-control" id="stress_level" value="{{stress_level}}"
+                               name="stress_level"
+                               title="Stress Level"
+                               data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="{{stress_level}}"/>
                     {{/with}}
                 {{else}}
-                    <input type="range" class="col-md-4 form-control" id="stress_level" value=50 name="stress_level" required="true" title="Stress Level" data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+                    {{#if alternative}}
+                        <input id="stress_level" type="text" value=50
+                               name="stress_level"
+                               class="form-control"
+                               data-provide="slider"
+                               data-slider-ticks="[25, 50, 75]"
+                               data-slider-ticks-labels='["low stress", "mid stress", "high stress"]'
+                               data-slider-min="25"
+                               data-slider-max="75"
+                               data-slider-step="25"
+                               data-slider-value="50"
+                               data-slider-tooltip="hide" />
+                    {{else}}
+                        <input type="range"
+                               id="stress_level"
+                               class="col-md-4 form-control"
+                               value=50
+                               name="stress_level"
+                               title="Stress Level"
+                               data-slider-id='ex1Slider'
+                               data-slider-min="1"
+                               data-slider-max="100"
+                               data-slider-step="1"
+                               data-slider-value="50"/>
+                        <div class="">
+                            "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
+                        </div>
+                    {{/if}}
                 {{/if}}
-                <div class="">
-                    "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
-                </div>
             </div>
 
 
@@ -85,12 +112,17 @@
     });
 
     // With JQuery
+    {{#unless alternative}}
     $('#stress_level').slider({
         formatter: function(value) {
             return 'Current value: ' + value;
-        }
+        },
+//        tooltip: 'always'
     });
+    {{/unless}}
 
+    console.log('priting today date');
+    console.log('today date: ' + (new Date()).toLocaleDateString());
 
     $("#date").on("change", checkValidTime);
     $("#time").on("change", checkValidTime);
