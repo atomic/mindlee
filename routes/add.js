@@ -3,7 +3,7 @@ var data = require("../data.json");
 exports.add_view = function (req, res) {
     res.render('add', { title   : 'Add Activity' ,
         is_edit: false,
-        alternative: false
+        alternative: false,
     });
 };
 
