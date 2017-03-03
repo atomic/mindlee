@@ -9,7 +9,8 @@ $(document).ready(function(event) {
 
     // With JQuery
     // for activity page
-    $('.delete-btn').click(deleteActivity);
+    $('.btn-delete-act').click(deleteActivity);
+    $(".btn-edit-act").click(editActivity);
 
     // for destress page
     $(".btn-destress-delete").click(deleteDestressActivity);
@@ -48,10 +49,18 @@ function deleteActivity(e) {
 
     // AJAX
     $.post('/delete_activity', { id: activity_id}, function (req, res) {
-        console.log('client clicked delete, act_id :' + activity_id);
         $activity.fadeOut();
     });
-    console.log('User clicked delete activity');
+}
+
+function editActivity(e) {
+    e.preventDefault();
+    var $activity = $(this).closest('.activity');
+    var activity_id = $activity.data('id');
+
+    $.post('/edit_activity', { id: activity_id}, function (req, res) {
+        // $activity.fadeOut();
+    });
 }
 
 function deleteDestressActivity(e) {

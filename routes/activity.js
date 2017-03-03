@@ -43,3 +43,31 @@ exports.addActivity = function (req, res) {
 
     res.render('schedule', {title: 'Schedule', 'data' : data} );
 };
+
+exports.editActivity = function (req, res) {
+
+    var title =         req.query["title"];
+    var date =          req.query["date"];
+    var time =          req.query["time"];
+    var stress_level =  req.query["stress_level"];
+
+    // the date object from the activity
+    var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
+
+    let now = new Date();
+
+    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": date_obj};
+
+    // data.activities[ data.next_activity_id ] = newact;
+    // data.activities[ id] TODO: finish this
+
+    // data.total_activities++;
+    // data.next_activity_id++;
+    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('Activity is saved!');
+    });
+
+
+    res.render('schedule', {title: 'Schedule', 'data' : data} );
+};

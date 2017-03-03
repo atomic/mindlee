@@ -16,7 +16,7 @@ var login           = require('./routes/login'            ); // Login Screen
 var home            = require('./routes/home'            ); // home screen with stress level bar
 var schedule        = require('./routes/schedule'        ); // schedule page with a lot of schedules
 var add             = require('./routes/add'             ); // add activity and stress page
-var add_activity    = require('./routes/add_activity'    ); // add act
+var activity        = require('./routes/activity'    ); // add act
 var status          = require('./routes/status'           ); // shows weekly status
 var contact         = require('./routes/contact'         ); // contact us form
 var help            = require('./routes/help'            ); // show help and faq about the app
@@ -89,13 +89,17 @@ if ('development' == app.get('env')) {
 
 
 // Add routes here
+var jsonParser = bodyParser.json();
+
 app.get('/'                , login.view);
 app.get('/home'            , home.view);
-app.get('/add'             , add.view);
-app.get('/add_activity'    , add_activity.addActivity);
+app.get('/add'             , jsonParser, add.add_view);
+app.get('/edit'            , jsonParser, add.edit_view);
+
+app.get('/add_activity'    , jsonParser, activity.addActivity);
+app.get('/edit_activity'    , jsonParser, activity.editActivity);
 app.get('/thanks'          , thanks.view    );
 
-var jsonParser = bodyParser.json();
 app.post('/delete_activity' , jsonParser, activities_json.removeActivity);
 app.post('/check_activity'  , jsonParser, activities_json.checkActivity);
 app.get( '/get_history'     , jsonParser, activities_json.getHistory);

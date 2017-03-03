@@ -6,8 +6,8 @@
         font-size: 1.5em;
     }
     .btn-check-stress {
-        position: absolute;
-        bottom: 1em;
+        position: relative;
+        /*bottom: 30%;*/
         left: 30%;
     }
 </style>
@@ -16,7 +16,7 @@
     <div class="row container page-header">
         <label class="col-md-8" for="">Your Schedules</label>
         <form class="col-md-1" action="/add" style="float: right">
-            <button class="btn-block btn-group-lg"><img type="submit" class="plus" src="images/plus.svg" alt=""></button>
+            <button class="btn btn-success btn-group-lg"><img type="submit" class="plus" src="images/plus.svg" alt=""></button>
         </form>
     </div>
 
@@ -31,8 +31,11 @@
                         <p class="act_time">Time: {{time}}</p>
                         <p class="stress_level">Stress Level: {{stress_level}}</p>
                         <div class="text-right">
-                            <a href="/add"><button href="/add_activity">Edit</button></a>
-                            <button class="delete-btn btn-danger">Delete</button>
+                            <form action="/edit">
+                                <input hidden=true type="text" name="id" id="edit_id" value={{@key}}>
+                                <button type="submit" class="btn">Edit</button>
+                                <button style="margin-left: 3%;" class="btn  btn-danger btn-delete-act">Delete</button>
+                            </form>
                             <!--button is hooked to POST request in mindlee.js-->
                         </div>
                     </div>
@@ -49,13 +52,15 @@
             {{/ifCond}}
         {{/with}}
 
+
+
+        <a class="" style="align-content: center;" href="/home">
+            <button class="btn btn-group-lg btn-primary btn-check-stress">
+                Check your stress level
+            </button>
+        </a>
     </div>
 
-    <a class="container" href="/home">
-        <button class="btn btn-primary btn-check-stress">
-            Check your stress level
-        </button>
-    </a>
 </div>
 
 <!-- The actual snackbar -->
