@@ -9,6 +9,7 @@
     <div class="schedule_body w3layouts">
         {{#if is_edit}}
             <form id="addActivityForm" role="form" method="get" action="/edit_activity">
+                <input hidden=true type="text" name="edit_id" id="edit_id" value={{edit_id}}>
         {{else}}
             <form id="addActivityForm" role="form" method="get" action="/add_activity">
         {{/if}}

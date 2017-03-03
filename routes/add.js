@@ -11,6 +11,7 @@ exports.edit_view = function (req, res) {
     res.render('add', {
         title   : 'Edit Activity',
         activity: data.activities[req.query.id],
+        edit_id : req.query.id,
         is_edit : true
     });
 };
