@@ -94,9 +94,10 @@
 
 
             <div class="text-center">
-                <a href="/schedule"> <input type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+                <a href="/schedule"> <input onclick="ga('send', 'event','like', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
                 <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
             </div>
+            <button onclick="ga('send', 'event','testBtn', 'click')" class="btn likeBtn">Test GA</button>
         </form>
     </div>
 </div>
