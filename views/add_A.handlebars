@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 {{> lab9-tracking-id}}
-{{> default-head }}
+
+<head>
+    <!-- Google Analytics Content Experiment code -->
+    <script>function utmx_section(){}function utmx(){}(function(){var
+            k='142121315-3',d=document,l=d.location,c=d.cookie;
+        if(l.search.indexOf('utm_expid='+k)>0)return;
+        function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+        indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+                        length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+                '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+                        '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+                '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+                valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+                '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+    </script><script>utmx('url','A/B');</script>
+    <!-- End of Google Analytics Content Experiment code -->
+    {{> default-head-content }}
+</head>
+
 <body>
 <!-- Header -->
 <!-- <div class="container default-background" id="home"> -->
@@ -108,10 +126,9 @@
 
 
         <div class="text-center">
-            <a href="/schedule"> <input onclick="ga('send', 'event','like', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
-            <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+            <a href="/schedule"> <input onclick="ga('send', 'event','cancel_add', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+            <input onclick="ga('send', 'event', 'add', 'click');" type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
         </div>
-        <!--<button onclick="ga('send', 'event','testBtn', 'click')" class="btn likeBtn">Test GA</button>-->
     </form>
     </div>
 </div>

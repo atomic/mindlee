@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 {{> lab9-tracking-id}}
-{{> default-head }}
+<head>
+    {{> default-head-content }}
+</head>
 <body>
 <!-- Header -->
 <!-- <div class="container default-background" id="home"> -->
@@ -107,10 +109,9 @@
 
 
         <div class="text-center">
-            <a href="/schedule"> <input onclick="ga('send', 'event','like', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
-            <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+            <a href="/schedule"> <input onclick="ga('send', 'event','cancel_add', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+            <input onclick="ga('send', 'event', 'add', 'click');" type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
         </div>
-        <!--<button onclick="ga('send', 'event','testBtn', 'click')" class="btn likeBtn">Test GA</button>-->
     </form>
     </div>
 </div>
