@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300|Vibur" rel="stylesheet">
 
     <link rel="stylesheet"          href="bower_components/bootstrap/dist/css/bootstrap.min.css"       type="text/css" media="all">
+    <link rel="stylesheet" href="css/vcarousel.css">
 
     <!--bower stuff-->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -34,6 +35,8 @@
     <link rel="stylesheet" href="css/login.css" type="text/css">
 </head>
 <body>
+
+
 
 
 <div class="container">
@@ -94,6 +97,61 @@
                     <a href="/home">Don't have an account?</a>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+<div class="bg-info">
+    <div class="container">
+        <div id="carousel-example-vertical" class="carousel vertical slide">
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <p class="ticker-headline">
+                        <a href="#">
+                            <strong>Welcome: </strong>
+                            <!--TODO 1: -->
+                            Type Instruction 1 Here, can only fit 1 line
+                        </a>
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="ticker-headline">
+                        <a href="#">
+                            <strong>Next Step: </strong>
+                            <!--TODO 2: -->
+                            Type Instruction 2 Here
+                        </a>
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="ticker-headline">
+                        <a href="#">
+                            <strong>Article Headline 3</strong>
+                            <!--TODO 2: -->
+                            Type Instruction 3 Here
+                        </a>
+                    </p>
+                </div>
+                <div class="item">
+                    <p class="ticker-headline">
+                        <a href="#">
+                            <strong>More steps?</strong>
+                            <!--TODO 3: -->
+                            More steps if necessary, if not delete this whole div.item
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="up carousel-control" href="#carousel-example-vertical" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="down carousel-control" href="#carousel-example-vertical" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 </div>
