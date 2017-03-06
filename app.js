@@ -97,7 +97,7 @@ app.get('/add'             , jsonParser, add.add_view);
 app.get('/edit'            , jsonParser, add.edit_view);
 
 // A/B Testing  routes
-app.get('/add_A'             , jsonParser, add.add_view);
+app.get('/add_A'             , jsonParser, add.add_view_A);
 app.get('/add_B'             , jsonParser, add.add_view_B);
 // end of A/B testing route
 

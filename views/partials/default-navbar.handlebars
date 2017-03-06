@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+    <!-- <div class="container"> -->
+    <div class="navbar-header">
+        <button id="hamburger" type="button" class="navbar-toggle w3layouts collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+            <span class="sr-only w3layouts">Toggle navigation</span>
+            <span class="icon-bar w3l"></span>
+            <span class="icon-bar aits"></span>
+            <span class="icon-bar w3laits"></span>
+        </button>
+        <a class="default-background" href="#">
+            <p class="nav-header-font" id="mindlee-name">
+                Mindlee
+            </p>
+        </a>
+        <!--<a class="agileits w3layouts nav-header-font" href={{ choose link "/home"}}>{{ choose title 'Mindlee'}}</a>-->
+    </div>
+    <div id="navbar" class="navbar-collapse navbar-right collapse">
+        <ul class="nav navigation-font navbar-nav">
+            <!--TODO: dynamically toggle .active for these li-->
+
+            <li><a href="/home"> Homepage</a></li>
+            <li><a href="/schedule">My Schedule</a></li>
+            <li><a href="/status">My Stats</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a onclick="ga('send', 'event','help', 'click')" href="/help">Help & FAQ</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+    </div>
+    <!-- </div> -->
+    <!--<hr class="nav-divider">-->
+</nav>

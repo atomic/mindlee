@@ -1,102 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{choose title 'Mindlee'}}</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Tropical Resorts a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet"          href="bower_components/bootstrap/dist/css/bootstrap.min.css"       type="text/css" media="all">
-    <link rel="stylesheet"          href="bower_components/bootstrap-timepicker/css/timepicker.css"    type="text/css" media="all">
-    <link rel="stylesheet"          href="bower_components/hover/css/hover-min.css"                     type="text/css" media="all">
-
-    <!-- Index-Page-CSS --> <link rel="stylesheet" href="css/style.css" 		type="text/css" media="all">
-    <!-- Animate.CSS --> 	<link rel="stylesheet" href="css/animate.css" 		type="text/css" media="all">
-                            <link rel="stylesheet" href="css/mindlee.css"       type="text/css" media="all">
-                            <link rel="stylesheet" href="css/snackbar.css"       type="text/css" media="all">
-
-
-
-
-    <!-- Body-Font -->	 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css">
-    <!-- Logo-Font -->	 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cinzel+Decorative:400,900,700" type="text/css">
-    <!-- Navbar-Font --> <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700"			   type="text/css">
-    <!-- Google Font Cathy --> <link href="https://fonts.googleapis.com/css?family=Oxygen:300|Vibur" rel="stylesheet">
-
-    <!--bower stuff-->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="bower_components/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-
-</head>
-{{> slider-ab-testing}}
-
+{{> default-head }}
 <body>
 <!-- Header -->
 <!-- <div class="container default-background" id="home"> -->
     <!-- Navbar -->
-    <nav class="navbar navbar-default">
-        <!-- <div class="container"> -->
-            <div class="navbar-header">
-                <button id="hamburger" type="button" class="navbar-toggle w3layouts collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                    <span class="sr-only w3layouts">Toggle navigation</span>
-                    <span class="icon-bar w3l"></span>
-                    <span class="icon-bar aits"></span>
-                    <span class="icon-bar w3laits"></span>
-                </button>
-                <a class="default-background" href="#">
-                    <p class="nav-header-font" id="mindlee-name">
-                        Mindlee
-                    </p>
-                </a>
-                <!--<a class="agileits w3layouts nav-header-font" href={{ choose link "/home"}}>{{ choose title 'Mindlee'}}</a>-->
-            </div>
-            <div id="navbar" class="navbar-collapse navbar-right collapse">
-                <ul class="nav navigation-font navbar-nav">
-                    <!--TODO: dynamically toggle .active for these li-->
-
-                    <li><a href="/home"> Homepage</a></li>
-                    <li><a href="/schedule">My Schedule</a></li>
-                    <li><a href="/status">My Stats</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><a onclick="ga('send', 'event','help', 'click')" href="/help">Help & FAQ</a></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </div>
-        <!-- </div> -->
-        <!--<hr class="nav-divider">-->
-    </nav>
+    {{> default-navbar}}
     <!-- //Navbar -->
 
-    <img src="https://s-media-cache-ak0.pinimg.com/originals/c3/57/98/c3579807fc1a9fba998f836a1cb51499.jpg" id="bg" alt="">
 
     <!-- Content Below -->
     {{! Every view gets inserted here }}
     {{{body}}}
 
 
+</body>
 
 
-<!-- </div> -->
-<!-- //Header -->
-<!-- Custom-JavaScript-File-Links -->
+<!--Main App Front End Scripts-->
+<script type="text/javascript" src="js/mindlee.js"></script>
 
-<!--&lt;!&ndash; Default-JavaScript &ndash;&gt;	  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>-->
-<!--&lt;!&ndash; Bootstrap-JavaScript &ndash;&gt; <script type="text/javascript" src="js/bootstrap.min.js"></script>-->
-<!-- Bootstrap-JavaScript --> <script type="text/javascript" src="js/mindlee.js"></script>
-
-
-<!-- Animate.CSS-JavaScript -->
-<script src="js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-<!-- //Animate.CSS-JavaScript -->
 
 <!-- Slider-JavaScript -->
 <script src="js/responsiveslides.min.js"></script>
@@ -113,15 +36,6 @@
         $().UItoTop({ easingType: 'easeOutQuart' });
     });
 </script>
-<script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-92509519-1', 'auto');
-    ga('send', 'pageview', 'button', 'click');
-</script>
 <a href="#" id="toTop" class="agileits w3layouts" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
 <!-- //Slide-To-Top JavaScript -->
 
@@ -136,8 +50,4 @@
     });
 </script>
 <!-- //Smooth-Scrolling-JavaScript -->
-
-{{> lab8-tracking-id}}
-
-</body>
 </html>

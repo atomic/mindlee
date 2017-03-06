@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> lab9-tracking-id}}
+{{> default-head }}
+<body>
+<!-- Header -->
+<!-- <div class="container default-background" id="home"> -->
+<!-- Navbar -->
+{{> default-navbar}}
+<!-- //Navbar -->
+
+
+<!-- Content Below -->
+{{! Every view gets inserted here }}
+<script type="text/javascript" src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+<link rel="stylesheet"          href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css"    type="text/css" media="all">
+
+
+<div class="main-content content container add-content">
+    <div class="schedule_header container">
+        <h2>Your Activity</h2>
+    </div>
+    <div class="schedule_body w3layouts">
+        {{#if is_edit}}
+        <form id="addActivityForm" role="form" method="get" action="/edit_activity">
+            <input hidden=true type="text" name="edit_id" id="edit_id" value={{edit_id}}>
+        {{else}}
+        <form id="addActivityForm" role="form" method="get" action="/add_activity">
+        {{/if}}
+        <div class="form-group">
+            <label for="title">Title:</label>
+            {{#if is_edit}}
+                {{#with activity}}
+                    <input type="text" class="form-control" id="title" placeholder="Activity name" name="title" value="{{title}}" required="true">
+                {{/with}}
+            {{else}}
+                <input type="text" class="form-control" id="title" placeholder="Activity name" name="title" value="" required="true">
+            {{/if}}
+        </div>
+        <div class="form-group bootstrap-timepicker">
+            <label for="date">Date:</label>
+            {{#if is_edit}}
+                {{#with activity}}
+                    <input type="date" class="form-control" id="date" placeholder="Date" name="date" value="{{date}}" required="true">
+                {{/with}}
+            {{else}}
+                <input type="date" class="form-control" id="date" placeholder="Date" name="date" value="" required="true">
+            {{/if}}
+        </div>
+
+        <!--add time with bootstrap-timepicker-->
+        <div class="form-group bootstrap-timepicker timepicker">
+            <label for="time"> Time: </label>
+            {{#if is_edit}}
+                {{#with activity}}
+                    <input name="time" id="time" type="text" onkeydown="return false;" class="form-control" value="{{time}}" required="true" title="time">
+                {{/with}}
+            {{else}}
+                <input name="time" id="time" type="text" onkeydown="return false;" class="form-control" value="" required="true" title="time">
+            {{/if}}
+        </div>
+
+        <div class="alert alert-danger" id="date_warning" hidden="true">
+            Please input time of activity for the future
+        </div>
+
+
+        <div class="form-group text-center">
+            <h4 class="panel-title text-danger">Stress Level</h4>
+            {{#if is_edit}}
+                {{#with activity}}
+                    <input type="range" class="col-md-4 form-control" id="stress_level" value="{{stress_level}}"
+                           name="stress_level"
+                           title="Stress Level"
+                           data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="{{stress_level}}"/>
+                {{/with}}
+            {{else}}
+                {{#if alternative}}
+                    <input id="stress_level" type="text" value=50
+                           name="stress_level"
+                           class="form-control"
+                           data-provide="slider"
+                           data-slider-ticks="[25, 50, 75]"
+                           data-slider-ticks-labels='["low stress", "mid stress", "high stress"]'
+                           data-slider-min="25"
+                           data-slider-max="75"
+                           data-slider-step="25"
+                           data-slider-value="50"
+                           data-slider-tooltip="hide" />
+                {{else}}
+                    <input type="range"
+                           id="stress_level"
+                           class="col-md-4 form-control"
+                           value=50
+                           name="stress_level"
+                           title="Stress Level"
+                           data-slider-id='ex1Slider'
+                           data-slider-min="1"
+                           data-slider-max="100"
+                           data-slider-step="1"
+                           data-slider-value="50"/>
+                    <div class="">
+                        "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
+                    </div>
+                {{/if}}
+            {{/if}}
+        </div>
+
+
+        <div class="text-center">
+            <a href="/schedule"> <input onclick="ga('send', 'event','like', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+            <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+        </div>
+        <!--<button onclick="ga('send', 'event','testBtn', 'click')" class="btn likeBtn">Test GA</button>-->
+    </form>
+    </div>
+</div>
+
+</body>
+
+<!--Main App Front End Scripts--> <script type="text/javascript" src="js/mindlee.js"></script>
+<!-- Slider-JavaScript -->        <script src="js/responsiveslides.min.js"></script>
+<!-- Slide-To-Top JavaScript -->
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            var defaults = {
+                                                containerID: 'toTop', // fading element id
+                                                containerHoverID: 'toTopHover', // fading element hover id
+                                                scrollSpeed: 100,
+                                                easingType: 'linear'
+                                            };
+                                            $().UItoTop({ easingType: 'easeOutQuart' });
+                                        });
+                                    </script>
+<!-- Slide-To-Top JavaScript --> <a href="#" id="toTop" class="agileits w3layouts" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+
+<!-- Smooth-Scrolling-JavaScript -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll, .navbar li a, .footer li a").click(function(event){
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+
+    $('#time').timepicker( {
+        showInputs: false,
+        minuteStep: 5,
+        defaultTime: 'current',
+        disableMousewheel: 'false',
+        disableFocus: true,
+        explicitMode: true
+    });
+
+    // With JQuery
+        {{#unless alternative}}
+        $('#stress_level').slider({
+            formatter: function(value) {
+                return 'Current value: ' + value;
+            },
+//        tooltip: 'always'
+        });
+        {{/unless}}
+
+    $("#date").on("change", checkValidTime);
+    $("#time").on("change", checkValidTime);
+
+    function checkValidTime() {
+        var timeformat = $("#date").val().replace(/-/g, "/") + ' ' + $("#time").val();
+        console.log(timeformat);
+        var mydate = new Date( timeformat );
+        let now = new Date();
+        console.log('date changed : ' + $("#date").val() + '  , date: ' + mydate);
+        console.log('now : ' + now);
+        console.log(now - mydate);
+        if (now - mydate >= 0) {
+//            alert("Please enter future date");
+            $("#date_warning").show();
+            if ($(this).is("#date")) {
+                $("#date").val("mm/dd/yyyy");
+            }
+        } else {
+            $("#date_warning").hide();
+        }
+    }
+</script>
+
+
+
+</html>
