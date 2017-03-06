@@ -53,6 +53,10 @@ exports.removeDestress = function (req, res) {
 exports.doDestress = function (req, res) {
     let val = parseInt(req.body.value);
     data.total_stress = data.total_stress - val;
+    if (data.total_stress < 0) {
+        data.total_stress = 0;  // prevent negative stress value
+    }
+
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
         if (err) throw err;
         console.log('Activity is saved!');
