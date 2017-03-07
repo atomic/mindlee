@@ -1,16 +1,59 @@
 <style>
     .container {
-        padding-top: 15em;
+        padding-top: 10em;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+
     }
+
+    #title_1 {
+        font-family: "Oxygen";
+        color: #413659;
+        font-size: 250%;
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+
+    #title_2 {
+        font-family: "Oxygen";
+        color: #ffffff;
+        font-size: 150%;
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+
+    #enter-btn {
+        background-color: rgba(0, 199, 201, 0.51);
+        border: rgba(0, 199, 201, 0.69);
+        font-family: "Oxygen";
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 100%;
+    }
+
 </style>
 
 
 <!--fill instructions here-->
 
-<div class="container main-content">
-    This is landing page
+<div class="container destress-title fadeIn">
+    <h1 id="title_1"> Welcome </h1>
+    <h2 id="title_2"> Mindlee is an app that helps individuals find some peace of
+        mind and be more aware of their stress levels. </h2>
+
 </div>
 
-<a href="/home">
-    <button>Go to Home</button>
-</a>
+
+
+<div class = "btn_destress">
+    <div class= "btn_flex">
+        <a href="/home">
+            <button type="button" id="enter-btn" class="btn btn-primary btn-lg"> Enter to Relax</button>
+        </a>
+    </div>
+</div>
