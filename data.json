@@ -1,16 +1,8 @@
 {
-	"total_activities": 1,
+	"total_activities": 0,
 	"next_activity_id": 2,
-	"total_stress": 0,
-	"activities": {
-		"1": {
-			"title": "Go to gym",
-			"date": "2017-02-28",
-			"time": "11:00 PM",
-			"stress_level": "84",
-			"date_object": "2017-03-01T07:00:00.000Z"
-		}
-	},
+	"total_stress": 84,
+	"activities": {},
 	"advices": [
 		{
 			"priority": "10",

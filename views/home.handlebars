@@ -13,11 +13,17 @@
     #stress_msg_2 {
         font-size: 1.5em;
     }
+
     #btn_destress {
-        margin-top: 3%;
-        background-color: #0bb46d;
-        border-color: #0bb46d;
+        background-color: #C1C5C6;
+        border-color: #C1C5C6;
     }
+
+    #btn_schedule{
+        background-color: #2bbfbe;
+        border-color: #2bbfbe;
+    }
+
 </style>
 <link rel="stylesheet" href="css/circle.css">
 <!--stuff for the circle radius bar-->
@@ -43,7 +49,7 @@
                 <h2 id="stress_msg_1"> Your Stress Level </h2>
                 <p id="stress_msg_2">Hmm, it's a little high . . . </p>
                 <!--<strong class="text-primary">{{choose ../message "Take 10 deep breaths"}}</strong>-->
-                <a id="btn_destress" href="/destress" class="btn btn-primary btn-lg">De-stress</a>
+                <!--<a id="btn_destress" href="/destress" class="btn btn-primary btn-lg">De-stress</a> -->
             </div>
         </div>
         {{/with}}
@@ -51,7 +57,18 @@
         <!--<div class="jumbotron">-->
         <!--</div>-->
 
-    <a href="/schedule" class="btn-block btn btn-primary btn-lg">Go to schedule</a>
+    <div class="">
+        <div class= btn_flex>
+            <a href="/schedule">
+                <button type="button" id = "btn_schedule" class="btn btn-primary btn-lg"> Go to Your Schedule </button>
+            </a>
+            <a href="/destress">
+                <button type="button" id ="btn_destress" class="btn btn-primary btn-lg">De-stress and Relax</button>
+            </a>
+        </div>
+    </div>
+
+   <!-- <a href="/schedule" class="btn-block btn btn-primary btn-lg">Go to schedule</a> -->
 
     <!-- Use a button to open the snackbar -->
     <!--<button onclick="showReminder()">Show Snackbar</button>-->
