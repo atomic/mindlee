@@ -93,8 +93,10 @@ var jsonParser = bodyParser.json();
 
 app.get('/'                , login.view);
 app.get('/home'            , home.view);
+app.get('/landing'         , home.landingView);
 app.get('/add'             , jsonParser, add.add_view);
 app.get('/edit'            , jsonParser, add.edit_view);
+
 
 // A/B Testing  routes
 app.get('/add_A'             , jsonParser, add.add_view_A);
