@@ -2,8 +2,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100|Montserrat:100|Yantramanav:100);
 
 body {
-    font-family: "Lato", sans-serif;
-    background-color: rgba(248, 249, 255, 0.6);
+    font-family: 'Yantramanav', sans-serif;
+
+    background: rgba(192,108,132,1);
+    background: -moz-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(192,108,132,1)), color-stop(15%, rgba(192,108,132,1)), color-stop(50%, rgba(108,91,123,1)), color-stop(85%, rgba(53,92,125,1)), color-stop(100%, rgba(53,92,125,1)));
+    background: -webkit-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
+    background: -o-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
+    background: -ms-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
+    background: linear-gradient(to bottom, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c06c84', endColorstr='#355c7d', GradientType=0 );
+
+
+    height: 100vh;
+    width: 100vw;
 }
 
 .mySlides {
@@ -265,7 +277,9 @@ div.page-header {
     left: 0;
     z-index: -100;
 
-    /* Preserve aspet ratio */
+    background-repeat: no-repeat;
+
+    /* Preserve aspect ratio
     min-width: 100%;
     min-height: 100%;
     opacity: 0.9;
