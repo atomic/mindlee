@@ -10,13 +10,42 @@
     #new_activity {
         background-color: rgba(100,227,221,0.23);
     }
+
+    #title {
+        font-family: "Oxygen";
+        color: #ffffff;
+        font-size: 130%;
+    }
+
+    #title_padding{
+        padding-bottom: 5%;
+    }
+
 </style>
 
 
 <div class="schedule_body w3-layout-container" id="destress_container">
+
+    <div id="title_padding" class="destress-title">
+        <h2 id="title" class="destress-title fadeIn"> Pick an Activity</h2>
+        <h2 id="title" class="destress-title fadeIn"> Start Your De-stressing Journey</h2>
+    </div>
+
+
+    {{#with data}}
+        <div class="stress-level center">
+            <div class="container activity hvr-glow">
+                <div class="row">
+                    <p class="text-reduce">Your Current Stress:  </p>
+                    <span>{{total_stress}}</span>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+
     {{#with destress}}
         {{#each default}}
-            <div class="container activity hvr-glow">
+            <div class="activity hvr-glow">
                 <div class="row">
                     <p class="col-xs-6 ">{{ message }}</p>
                     <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>

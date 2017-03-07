@@ -3,6 +3,7 @@
  */
 var destress = require('../destress.json');
 var fs = require('fs');
+var data = require('../data.json');
 
 exports.view = function(req, res){
     res.render('destress', { link:'/destress', title: 'Destress', 'destress' : destress});

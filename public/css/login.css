@@ -87,3 +87,9 @@ input::-webkit-input-placeholder {
     height: 100%;
     opacity: 0.5;
 }
+
+
+.btn-primary{
+    background-color: #2bbfbe;
+    border-color: #2bbfbe;
+}
