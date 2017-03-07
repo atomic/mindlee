@@ -13,7 +13,12 @@
     }
 
     #new_activity {
-        background-color: rgba(100,227,221,0.23);
+        background-color: rgba(173, 173, 173, 0.69);
+        border: rgba(206, 206, 206, 0.69);
+        font-family: "Oxygen";
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 130%;
     }
 
     #title_1 {
@@ -28,6 +33,15 @@
         font-size: 100%;
     }
 
+    #btn_home{
+        background-color: #2bbfbe;
+        border-color: #2bbfbe;
+        font-size: 80%;
+    }
+
+    .btn{
+        font-size:
+    }
 
 </style>
 
@@ -64,20 +78,40 @@
                 <div class="row">
                     <p class="col-xs-6 d-message">{{ message }}</p>
                     <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
-                    <div class="text-right col-xs-2">
-                        <button class="btn btn-success">Do</button>
-                        <!--button is hooked to POST request in mindlee.js-->
-                    </div>
-                    <div class="text-right col-xs-2">
-                        <button class="btn btn-destress-delete btn-danger">Delete</button>
-                        <!--button is hooked to POST request in mindlee.js-->
+
+                    <div class="btns_add">
+                        <div class="text-right col-xs-2">
+                            <button class="btn btn-success">Do</button>
+                            <!--button is hooked to POST request in mindlee.js-->
+                        </div>
+                        <div class="text-right col-xs-2">
+                            <button class="btn btn-destress-delete btn-danger">Delete</button>
+                            <!--button is hooked to POST request in mindlee.js-->
+                        </div>
                     </div>
                 </div>
             </div>
         {{/each}}
     {{/with}}
-    <a id="new_activity" href="/add_destress" class="container activity center-block text-center text-center hvr-glow">
-        Add new de-stress activity</a>
+
+
+    <div class = "btn_destress">
+        <div class= "btn_flex">
+            <a href="/add_destress">
+                <button type="button" id = "new_activity" class="btn btn-primary btn-lg"> Add Custom De-Stress Activity</button>
+            </a>
+        </div>
+
+
+        <div class= "btn_flex">
+            <a href="/home">
+                <button type="button" id= "btn_home" class="btn btn-primary btn-lg"> Go Back</button>
+            </a>
+        </div>
+    </div>
+
+
+
 </div>
 
 
