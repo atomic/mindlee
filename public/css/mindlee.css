@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-
+@import url(https://fonts.googleapis.com/css?family=Lato:100|Montserrat:100|Yantramanav:100);
 
 body {
     font-family: "Lato", sans-serif;
-    background-color: #f2efdf;
+    background-color: rgba(248, 249, 255, 0.6);
 }
 
 .mySlides {
@@ -268,9 +268,9 @@ div.page-header {
     /* Preserve aspet ratio */
     min-width: 100%;
     min-height: 100%;
-    opacity: 0.5;
+    opacity: 0.9;
 
-    filter: blur(50px);
+    filter: blur(60px);
 }
 
 .faq-content {
