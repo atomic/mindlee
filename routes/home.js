@@ -18,6 +18,12 @@ exports.view = function(req, res){
 };
 
 
+exports.landingView = function (req, res) {
+    // landing page
+    res.render('landing', {title: 'Tutorial'});
+};
+
+
 function nextStressLevel(n) {
     return n + (10 - n % 10);
 }
