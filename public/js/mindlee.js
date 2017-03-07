@@ -87,7 +87,7 @@ function doDestress(e) {
     $.post('/do_destress', { value: destress_value } , function (req, res) {
         console.log('destress complete');
     });
-    window.location.replace("/home");
+    window.location.replace("/destress");
 }
 
 function showReminder(e) {
