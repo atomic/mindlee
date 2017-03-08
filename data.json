@@ -1,8 +1,16 @@
 {
-	"total_activities": 0,
-	"next_activity_id": 2,
-	"total_stress": 74,
-	"activities": {},
+	"total_activities": 1,
+	"next_activity_id": 3,
+	"total_stress": 34,
+	"activities": {
+		"2": {
+			"title": "midterm",
+			"date": "2017-03-08",
+			"time": "5:00 PM",
+			"stress_level": "50",
+			"date_object": "2017-03-09T01:00:00.000Z"
+		}
+	},
 	"advices": [
 		{
 			"priority": "10",

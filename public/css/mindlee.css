@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Yantramanav', sans-serif;
+    color: #FFFFFF;
 
     background: rgba(192,108,132,1);
     background: -moz-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
@@ -102,7 +103,8 @@ body {
 .activity {
     border: solid 1px #585858;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.4);
     align-items:center;
     margin: 5px;
     padding: 3%;
@@ -142,7 +144,7 @@ body {
 /*end destress fade-in animation*/
 
 .btn-success{
-    background-color: #2bbfbe;
+    background-color: transparent;
     border-color: transparent;
 }
 
@@ -217,7 +219,7 @@ h1.text-danger {
 .nav-header-font {
     font-family: "Vibur";
     font-size: 400%;
-    color: #413659;
+    color: #3d1937;
 }
 
 .navigation-font {
@@ -245,20 +247,14 @@ button#hamburger {
 }
 /*          Homepage CSS            */
 .homepage-background {
-    padding-top: 120px;
+    padding-top: 8em;
 }
 
 .homepage-greeting-font {
-    font-family: "Oxygen";
     color: #422335;
 }
 
-.homepage-font {
-    font-family: "Oxygen";
-}
-
 .homepage-name-font {
-    font-family: "Oxygen";
     font-size: 200%;
     color: #FFFFFF;
 }
@@ -322,4 +318,6 @@ div.page-header {
     padding-top:3em;
 }
 
+
+/*stress page css*/
 

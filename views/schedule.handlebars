@@ -15,6 +15,19 @@
         font-size: x-large;
         color: beige;
     }
+
+    #go_destress_button{
+        background-color: #00bcd4;
+        border-color: transparent;
+        font-size: 100%;
+    }
+
+    #btn_home{
+        background-color: #bbbfc0;
+        border-color: transparent;
+        font-size: 100%;
+    }
+
 </style>
 <div class="main-content container">
 
@@ -59,11 +72,20 @@
 
 
 
-        <a class="" style="align-content: center;" href="/home">
-            <button class="btn btn-block btn-group-lg btn-primary btn-check-stress">
-                Check your stress level
-            </button>
-        </a>
+        <div class = "btn_flex">
+            <div class= "btn_flex">
+                <a href="/destress">
+                    <button type="button" id = "go_destress_button" class="btn btn-primary btn-lg"> Go De-Stress</button>
+                </a>
+            </div>
+
+
+            <div class= "btn_flex">
+                <a href="/home">
+                    <button type="button" id= "btn_home" class="btn btn-primary btn-lg"> Go Back</button>
+                </a>
+            </div>
+        </div>
     </div>
 
 </div>
