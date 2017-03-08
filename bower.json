@@ -21,5 +21,8 @@
     "bootstrap-timepicker": "^0.5.2",
     "seiyria-bootstrap-slider": "^9.7.2",
     "hover": "Hover#^2.1.0"
+  },
+  "resolutions": {
+    "jquery": "~1.11.1"
   }
 }

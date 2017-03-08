@@ -9,8 +9,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "postinstall": "bower install"
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.16.1",
