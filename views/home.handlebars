@@ -82,7 +82,7 @@
             </div>
             <div class="stress-note text-center homepage-font"text-center>
                 <h2 id="stress_msg_1"> Your Stress Level </h2>
-                <p id="stress_msg_2">Hmm, it's a little high . . . </p>
+                <p id="stress_msg_2"></p>
                 <!--<strong class="text-primary">{{choose ../message "Take 10 deep breaths"}}</strong>-->
                 <!--<a id="btn_destress" href="/destress" class="btn btn-primary btn-lg">De-stress</a> -->
             </div>
@@ -113,6 +113,7 @@
 <script>
     let $total_stress = $("#total_stress");
     let $radius = $("#my-radius-bar");
+    let $stress_msg = $("#stress_msg_2");
     let total = $total_stress.data('value');
     if (total < 100) {
         $radius.addClass('p' + total);
@@ -121,11 +122,15 @@
     }
     if (total < 35) {
         $radius.addClass('green');
+        $stress_msg.text('Life is calm')
     } else if (total < 75) {
         $radius.addClass('blue');
+        $stress_msg.text('Seems like your stress is increasing')
     } else if (total < 100) {
         $radius.addClass('orange');
+        $stress_msg.text('You should take time to destress soon')
     } else {
         $radius.addClass('orange red');
+        $stress_msg.text('Don\'t push yourself too hard, relax.')
     }
 </script>
