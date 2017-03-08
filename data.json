@@ -1,0 +1,65 @@
+{
+	"total_activities": 1,
+	"next_activity_id": 13,
+	"total_stress": 218,
+	"activities": {
+		"8": {
+			"title": "midterm",
+			"date": "2017-03-08",
+			"time": "9:40 PM",
+			"stress_level": "50",
+			"date_object": "2017-03-09T05:40:00.000Z"
+		}
+	},
+	"advices": [
+		{
+			"priority": "10",
+			"message": "Take 5 deep breaths"
+		},
+		{
+			"priority": "20",
+			"message": "Take 10 deep breaths"
+		},
+		{
+			"priority": "30",
+			"message": "Take 15 deep breaths"
+		},
+		{
+			"priority": "40",
+			"message": "Listen to calm music for 10 minutes"
+		},
+		{
+			"priority": "50",
+			"message": "Take a 10 minutes walk"
+		},
+		{
+			"priority": "60",
+			"message": "Take a 10 minutes meditation"
+		},
+		{
+			"priority": "70",
+			"message": "Do a 30 minutes Yoga Practice "
+		},
+		{
+			"priority": "80",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "90",
+			"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "500",
+			"message": "Schedule appointment with therapist"
+		}
+	],
+	"name": "test"
+}	"message": "Do outdoor exercise for 30 minutes"
+		},
+		{
+			"priority": "500",
+			"message": "Schedule appointment with therapist"
+		}
+	],
+	"name": "test"
+}
