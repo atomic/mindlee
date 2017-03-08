@@ -117,6 +117,9 @@ body {
     /*animation: fadein 2s;*/
 }
 
+.bootstrap-timepicker-widget table td{
+    color: black;
+}
 
 /*destress title fade-in animation*/
 .destress-title{

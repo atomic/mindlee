@@ -44,7 +44,7 @@
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
                     <div class="container activity hvr-glow hvr-sweep-to-left" data-id={{@key}}>
-                        <p>Title: {{ title }}</p>
+                        <p id="schedule-title">Title: {{ title }}</p>
                         <p class="act_date">Date: {{date}}</p>
                         <p class="act_time">Time: {{time}}</p>
                         <p class="stress_level">Stress Level: {{stress_level}}</p>
@@ -52,7 +52,7 @@
                             <form action="/edit">
                                 <input hidden=true type="text" name="id" id="edit_id" value={{@key}}>
                                 <button type="submit" class="btn">Edit</button>
-                                <button style="margin-left: 3%;" class="btn  btn-danger btn-delete-act">Delete</button>
+                                <button style="margin-left: 3%;" class="btn btn-danger btn-delete-act">Delete</button>
                             </form>
                             <!--button is hooked to POST request in mindlee.js-->
                         </div>
