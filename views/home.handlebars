@@ -65,7 +65,7 @@
         {{#with data}}
         <div class="stress-level center">
             <div class="clearfix">
-                <div class="c100 big green" id="my-radius-bar">
+                <div class="c100 big" id="my-radius-bar">
                     <span id="total_stress" data-value="{{total_stress}}">{{total_stress}}%</span>
                     <div class="slice">
                         <div class="bar"></div>
@@ -105,9 +105,16 @@
 
 <script>
     let $total_stress = $("#total_stress");
+    let $radius = $("#my-radius-bar");
     let total = $total_stress.data('value');
     if (total < 100) {
-        console.log('adding class to radius : ' + 'p' + total);
-        $("#my-radius-bar").addClass('p' + total);
+        $radius.addClass('p' + total);
+    }
+    if (total < 35) {
+        $radius.addClass('green');
+    } else if (total < 75) {
+        $radius.addClass('blue');
+    } else {
+        $radius.addClass('orange');
     }
 </script>
