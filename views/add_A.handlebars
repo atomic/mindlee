@@ -19,6 +19,12 @@
     {{> default-head-content }}
 </head>
 
+<style>
+    .container label, .msg-slider-value,h2, div {
+        color: white;
+    }
+</style>
+
 <body>
 <!-- Header -->
 <!-- <div class="container default-background" id="home"> -->
@@ -117,7 +123,7 @@
                            data-slider-max="100"
                            data-slider-step="1"
                            data-slider-value="50"/>
-                    <div class="">
+                    <div class="msg-slider-value">
                         "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
                     </div>
                 {{/if}}
