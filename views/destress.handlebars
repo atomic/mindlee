@@ -8,6 +8,13 @@
         padding-right: 2%;
     }
 
+    .text-activity-reduce {
+        font-size: large;
+        color: aquamarine;
+        font-weight: bolder;
+        margin-top: 2%;
+    }
+
     #stress-level{
         color: #ffffff;
     }
@@ -40,9 +47,31 @@
     }
 
     .btn{
-        margin: 6% 0;
+        margin: 5% 1em;
     }
 
+    .message {
+        color: floralwhite;
+        font-weight: bold;
+        font-size: large;
+        margin-top: 2%;
+    }
+
+    .col-xs-2 {
+        width: 11.666667%;
+    }
+
+    .btn-do {
+        margin-left: 2em;
+        color: black;
+        font-weight: bold;
+    }
+
+    .btn-danger {
+        margin-left: 2em;
+        font-weight: bold;
+        color: beige;
+    }
 </style>
 
 
@@ -65,8 +94,8 @@
         {{#each default}}
             <div class="activity hvr-glow">
                 <div class="row">
-                    <p class="col-xs-6 ">{{ message }}</p>
-                    <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                    <p class="col-xs-6 message">{{ message }}</p>
+                    <p class="col-xs-1 text-activity-reduce">-{{ stress_reduce }}</p>
                     <div class="text-right col-xs-4">
                         <button class="btn btn-success btn-do">Do</button>
                     </div>
@@ -76,12 +105,12 @@
         {{#each custom}}
             <div class="activity hvr-glow">
                 <div class="row">
-                    <p class="col-xs-6 d-message">{{ message }}</p>
-                    <p class="col-xs-1 text-reduce">-{{ stress_reduce }}</p>
+                    <p class="col-xs-6 message">{{ message }}</p>
+                    <p class="col-xs-1 text-activity-reduce">-{{ stress_reduce }}</p>
 
                     <div class="btns_add">
                         <div class="text-right col-xs-2">
-                            <button class="btn btn-success">Do</button>
+                            <button class="btn btn-success btn-do">Do</button>
                             <!--button is hooked to POST request in mindlee.js-->
                         </div>
                         <div class="text-right col-xs-2">
