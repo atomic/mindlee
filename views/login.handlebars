@@ -91,9 +91,7 @@
                 <!--</div>-->
 
                 <div class="form-group ">
-                    <a href="/landing">
-                        <button type="button" id = "login_button_custom" class="btn btn-primary btn-lg btn-block login-button">Sign In</button>
-                    </a>
+                        <button type="button"  id = "login_button_custom" class="btn btn-primary btn-lg btn-block login-button">Sign In</button>
                 </div>
                 <div class="login-register">
                     <a href="/home">Don't have an account?</a>
@@ -105,6 +103,16 @@
 
 
 <!-- Bootstrap-JavaScript --> <script type="text/javascript" src="js/mindlee.js"></script>
+<script>
+    $("#login_button_custom").click( function(e) {
+        e.preventDefault();
+        let name = $("#name").val();
+        console.log('user clicked login with name: ' + name);
+        $.post('/store_name', { 'name': name } , function (req, res) {
+        });
+        window.location.replace("/landing");
+    });
+</script>
 
 
 
