@@ -1,2 +1,4 @@
 .idea/*
 public/bower_components/*
+data.json
+history.json
