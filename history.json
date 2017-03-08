@@ -1,58 +1,42 @@
 [
 	{
-		"title": "Quiz 4",
-		"date": "2017-03-08",
-		"time": "5:00 PM",
-		"stress_level": "50",
-		"date_object": "2017-03-09T01:00:00.000Z",
-		"total_stress": 84
+		"title": "Homework Due",
+		"date": "2017-02-26",
+		"time": "8:00 AM",
+		"stress_level": "27",
+		"total_stress": "27",
+		"date_object": "2017-02-26T16:00:00.000Z"
 	},
 	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "8:40 AM",
-		"stress_level": "50",
-		"date_object": "2017-03-08T16:40:00.000Z",
-		"total_stress": 84
+		"title": "Midterm",
+		"date": "2017-02-26",
+		"time": "2:00 PM",
+		"stress_level": "62",
+		"total_stress": "62",
+		"date_object": "2017-02-26T22:00:00.000Z"
 	},
 	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "8:40 AM",
-		"stress_level": "50",
-		"date_object": "2017-03-08T16:40:00.000Z",
-		"total_stress": 84
+		"title": "Coffee",
+		"date": "2017-02-27",
+		"time": "2:00 PM",
+		"stress_level": "24",
+		"total_stress": "24",
+		"date_object": "2017-02-27T22:00:00.000Z"
 	},
 	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "8:40 AM",
-		"stress_level": "50",
-		"date_object": "2017-03-08T16:40:00.000Z",
-		"total_stress": 84
+		"title": "Pay Rent",
+		"date": "2017-02-27",
+		"time": "4:00 PM",
+		"stress_level": "78",
+		"total_stress": "78",
+		"date_object": "2017-02-28T00:00:00.000Z"
 	},
 	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "9:40 PM",
-		"stress_level": "50",
-		"date_object": "2017-03-09T05:40:00.000Z",
-		"total_stress": 84
-	},
-	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "9:40 PM",
-		"stress_level": "50",
-		"date_object": "2017-03-09T05:40:00.000Z",
-		"total_stress": 84
-	},
-	{
-		"title": "midterm",
-		"date": "2017-03-08",
-		"time": "9:40 PM",
-		"stress_level": "50",
-		"date_object": "2017-03-09T05:40:00.000Z",
-		"total_stress": 84
+		"title": "Phone Interview",
+		"date": "2017-02-27",
+		"time": "7:00 PM",
+		"stress_level": "61",
+		"total_stress": "61",
+		"date_object": "2017-02-28T03:00:00.000Z"
 	}
 ]
