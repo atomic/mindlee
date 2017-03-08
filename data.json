@@ -1,7 +1,7 @@
 {
 	"total_activities": 1,
 	"next_activity_id": 13,
-	"total_stress": 218,
+	"total_stress": 78,
 	"activities": {
 		"8": {
 			"title": "midterm",
@@ -47,14 +47,6 @@
 		{
 			"priority": "90",
 			"message": "Do outdoor exercise for 30 minutes"
-		},
-		{
-			"priority": "500",
-			"message": "Schedule appointment with therapist"
-		}
-	],
-	"name": "test"
-}	"message": "Do outdoor exercise for 30 minutes"
 		},
 		{
 			"priority": "500",
