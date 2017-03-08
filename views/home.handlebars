@@ -52,6 +52,13 @@
     .c100.green .bar, .c100.green .fill {
         border-color: #62f84c !important;
     }
+
+    .c100.red .bar, .c100.red .fill {
+        border-color: #dd2b1b !important;
+    }
+    .c100.red:hover > span {
+        color: #dd2919;
+    }
 </style>
 <!--stuff for the circle radius bar-->
 
@@ -109,12 +116,16 @@
     let total = $total_stress.data('value');
     if (total < 100) {
         $radius.addClass('p' + total);
+    } else {
+        $radius.addClass('p100');
     }
     if (total < 35) {
         $radius.addClass('green');
     } else if (total < 75) {
         $radius.addClass('blue');
-    } else {
+    } else if (total < 100) {
         $radius.addClass('orange');
+    } else {
+        $radius.addClass('orange red');
     }
 </script>
