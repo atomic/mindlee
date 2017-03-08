@@ -217,8 +217,10 @@ h1.text-danger {
           Navigation  Section
 ***/
 #mindlee-name {
+    margin-top: 0.7%;
     text-align: center;
-    padding-left: 1em;
+    padding-left: 1.4em;
+    font-size: 400%;
 }
 
 .nav-header-font {
@@ -228,7 +230,7 @@ h1.text-danger {
 }
 
 .navigation-font {
-    font-family: "Oxygen";
+    font-family: 'Yantramanav', sans-serif;
 }
 
 #navbar{
@@ -246,17 +248,28 @@ h1.text-danger {
     font-size: 200%;
 }
 
+
 button#hamburger {
-    margin-right: 25px;
+    margin-right: 30px;
     margin-top: 25px;
+    border-radius: 5px;
+    border-color: #F18b95;
+    border-spacing: 20px 20px;
+    background-color: transparent;
 }
+
+
+.navbar-toggle{
+    border: 2px solid transparent;
+}
+
 /*          Homepage CSS            */
 .homepage-background {
     padding-top: 8em;
 }
 
 .homepage-greeting-font {
-    color: #422335;
+    color: #f8b195;
 }
 
 .homepage-name-font {
