@@ -63,6 +63,13 @@ exports.doDestress = function (req, res) {
     });
 };
 
+exports.storeName = function (req, res) {
+    data.name = req.body.name;
+    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+    });
+};
+
 exports.getHistory = function (req, res) {
     res.json(hist);
 };

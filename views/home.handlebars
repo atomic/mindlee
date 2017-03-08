@@ -57,12 +57,12 @@
 
 <div class="homepage-background">
 
+        {{#with data}}
         <h2 class="homepage-greeting-font">
             Good Afternoon,
         </h2>
-        <h2 class="homepage-name-font">User</h2>
+        <h2 class="homepage-name-font">{{name}}</h2>
 
-        {{#with data}}
         <div class="stress-level center">
             <div class="clearfix">
                 <div class="c100 big" id="my-radius-bar">
