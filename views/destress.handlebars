@@ -81,6 +81,15 @@
         font-weight: bold;
         color: beige;
     }
+    .custom-btn-group {
+        display: flex;
+        margin-left: 2.5em;
+        /*align-items: center;*/
+        /*justify-content: center;*/
+    }
+    .custom-btn-group .btn {
+        margin: auto 0.3em;
+    }
 </style>
 
 
@@ -120,15 +129,11 @@
                     <p class="col-xs-6 message">{{ message }}</p>
                     <p class="col-xs-1 text-activity-reduce">-{{ stress_reduce }}</p>
 
-                    <div class="btns_add">
-                        <div class="text-right col-xs-2">
+                    <div class="text-right col-xs-2 custom-btn-group">
                             <button class="btn btn-success btn-do">Do</button>
                             <!--button is hooked to POST request in mindlee.js-->
-                        </div>
-                        <div class="text-right col-xs-2">
                             <button class="btn btn-destress-delete btn-danger">Delete</button>
                             <!--button is hooked to POST request in mindlee.js-->
-                        </div>
                     </div>
                 </div>
             </div>
