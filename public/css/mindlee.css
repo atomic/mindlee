@@ -142,6 +142,10 @@ body {
 }
 /*end destress fade-in animation*/
 
+.btn {
+    font-weight: bold;
+}
+
 .btn-success{
     background-color: #2bbfbe;
     border-color: transparent;
