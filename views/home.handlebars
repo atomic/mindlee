@@ -1,4 +1,5 @@
 <!--stuff for the circle radius bar-->
+<link rel="stylesheet" href="css/circle.css">
 <style type="text/css">
 
     .clearfix:before,.clearfix:after {content: " "; display: table;}
@@ -29,11 +30,33 @@
         border-color: #2bbfbe;
     }
 
+    .clearfix {
+        margin: 10% 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .c100 {
+        background-color: rgba(195, 195, 195, 0.14);
+    }
+    .c100:after {
+        background-color: rgba(204, 204, 204, 0.58);
+    }
+    .c100.green:hover > span {
+        color: #3eff2b;
+    }
+    .c100 > span {
+        color: white;
+        font-weight: bold;
+    }
+    .c100.green .bar, .c100.green .fill {
+        border-color: #62f84c !important;
+    }
 </style>
-<link rel="stylesheet" href="css/circle.css">
 <!--stuff for the circle radius bar-->
 
 <div class="homepage-background">
+
         <h2 class="homepage-greeting-font">
             Good Afternoon,
         </h2>
@@ -42,8 +65,8 @@
         {{#with data}}
         <div class="stress-level center">
             <div class="clearfix">
-                <div class="c100 p50 big green">
-                    <span>{{total_stress}}%</span>
+                <div class="c100 big green" id="my-radius-bar">
+                    <span id="total_stress" data-value="{{total_stress}}">{{total_stress}}%</span>
                     <div class="slice">
                         <div class="bar"></div>
                         <div class="fill"></div>
@@ -80,3 +103,11 @@
 
 </div>
 
+<script>
+    let $total_stress = $("#total_stress");
+    let total = $total_stress.data('value');
+    if (total < 100) {
+        console.log('adding class to radius : ' + 'p' + total);
+        $("#my-radius-bar").addClass('p' + total);
+    }
+</script>
