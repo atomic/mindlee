@@ -67,7 +67,7 @@ function deleteDestressActivity(e) {
     e.preventDefault();
 
     let $de_activity = $(this).closest('.activity');
-    let $destress_message = $de_activity.find('p.d-message');
+    let $destress_message = $de_activity.find('p.message');
     console.log($destress_message.text());
     let msg = $destress_message.text();
 
