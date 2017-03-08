@@ -31,10 +31,11 @@ body {
 .content {
     align-content: center;
     vertical-align: middle;
-    position: relative;
-    float: left;
+    position: absolute;
+    padding-top: 10%;
+    width: 100%;
 }
-
+;
 .contact-content{
     padding-top:120px;
 }
@@ -65,9 +66,9 @@ body {
 
 .add-content {
     margin-top: 20%;
-    border: solid 2px #bbbbbb;
+    border: solid 1px #ffffff;
     border-radius: 33px;
-    padding: 3%;
+    padding: 4%;
     align-content: center;
     transform: translate(0%, 10%);
 }
@@ -197,13 +198,19 @@ h1.text-danger {
 
 /*add activity page */
 #ex1Slider .slider-selection {
-    background: #BABABA;
+    background: rgba(248, 177, 149, 0.55);
+}
+
+#ex1Slider .slider-handle{
+    background-color: #ff8967;
+    background-image: none;
 }
 
 .btn-add-activity {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
+
 }
 
 /* default CSS */
