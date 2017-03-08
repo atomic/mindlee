@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    .stress-instruct{
-        color: #FFFFFF;
-    }
-
-
-</style>
-
 <head>
     <!-- Google Analytics Content Experiment code -->
     <script>function utmx_section(){}function utmx(){}(function(){var
@@ -26,6 +18,12 @@
     <!-- End of Google Analytics Content Experiment code -->
     {{> default-head-content }}
 </head>
+
+<style>
+    .container label, .msg-slider-value,h2, div {
+        color: white;
+    }
+</style>
 
 <body>
 <!-- Header -->
@@ -125,7 +123,8 @@
                            data-slider-max="100"
                            data-slider-step="1"
                            data-slider-value="50"/>
-                    <div class="stress-instruct">
+
+                    <div class="msg-slider-value">
                         "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
                     </div>
                 {{/if}}

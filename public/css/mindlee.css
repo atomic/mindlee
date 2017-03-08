@@ -13,6 +13,7 @@ body {
     background: -ms-linear-gradient(top, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
     background: linear-gradient(to bottom, rgba(192,108,132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c06c84', endColorstr='#355c7d', GradientType=0 );
+    background-attachment: fixed;
 
 
     height: 100vh;
@@ -142,6 +143,10 @@ body {
     animation-name: fadeIn;
 }
 /*end destress fade-in animation*/
+
+.btn {
+    font-weight: bold;
+}
 
 .btn-success{
     background-color: transparent;
