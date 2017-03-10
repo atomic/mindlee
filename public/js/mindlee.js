@@ -12,9 +12,6 @@ $(document).ready(function(event) {
     $('.btn-delete-act').click(deleteActivity);
     $(".btn-edit-act").click(editActivity);
 
-    // for destress page
-    $(".btn-destress-delete").click(deleteDestressActivity);
-    $(".btn-do").click(doDestress);
 
     // $("#date").valueAsDate = new Date();
     $('div.activity').hover(function () {
@@ -63,34 +60,6 @@ function editActivity(e) {
     });
 }
 
-function deleteDestressActivity(e) {
-    e.preventDefault();
-
-    let $de_activity = $(this).closest('.activity');
-    let $destress_message = $de_activity.find('p.message');
-    console.log($destress_message.text());
-    let msg = $destress_message.text();
-
-
-    console.log('message(client): ' + msg);
-    $.post('/delete_destress_activity' , { message: msg}, function (req, res) {
-        console.log('client clicked delete destress.');
-        $de_activity.fadeOut();
-    });
-
-}
-
-function doDestress(e) {
-    e.preventDefault();
-    let $de_activity = $(this).closest('.activity');
-    let destress_value = -(parseInt($de_activity.find('p.text-activity-reduce').text()));
-    let destress_msg =  $de_activity.find('p.message').text();
-
-    $.post('/do_destress', { value: destress_value , message: destress_msg} , function (req, res) {
-        console.log('destress complete');
-    });
-    window.location.replace("/destress");
-}
 
 function showReminder(e) {
     // Get the snackbar DIV
