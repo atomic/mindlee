@@ -2,22 +2,49 @@
 <link rel="stylesheet"          href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css"    type="text/css" media="all">
 
 
+
+<style>
+    .btn-primary{
+        background-color: #2BBFBE;
+        border-color: #2BBFBE;
+        font-size: 110%;
+    }
+
+    .btn-default{
+        background-color: #fdfdfd;
+        border-color: #fdfdfd;
+        color: #000000;
+        font-size: 110%;
+    }
+
+    #stress-level-container{
+        margin-top: 1em;
+    }
+</style>
+
+
+
+
 <div class="main-content content container add-content">
     <div class="schedule_header container">
-        <h2 class="title">New De-stress activity</h2>
+        <h2 class="title">New De-Stress Activity</h2>
     </div>
     <div class="schedule_body w3layouts">
         <form id="addActivityForm" role="form" method="get" action="/add_destress_activity">
             <div class="form-group">
                 <label for="title">Title:</label>
-                <input type="text" class="form-control" id="title" placeholder="Activity name" name="title" value="" required="true">
+                <input type="text" class="form-control" id="title" placeholder="Activity name"
+                       name="title" value="" required="true">
             </div>
 
             <div class="form-group text-center">
-                <h4 class="panel-title">Stress Level</h4>
-                    <input type="range" class="col-md-4 form-control" id="stress_level" value=50 name="stress_level" required="true" title="Stress Level" data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
-                <div class="slider-message">
-                    "Please select a value for the stress level of the de-stress activity. 0 means not a relaxing activities, 100 means a super relaxing activity"
+                <h4 id="stress-level-container" class="panel-title">Stress Level</h4>
+                    <input type="range" class="col-md-4 form-control" id="stress_level" value=50
+                           name="stress_level" required="true" title="Stress Level" data-slider-id='ex1Slider'
+                           data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+                <div id="stress-level-container" class="slider-message">
+                    "Please select a value for how much stress your activity can relieve. 0 means not a very relaxing
+                        activity and 100 means a very relaxing activity"
                 </div>
             </div>
 
