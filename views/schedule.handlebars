@@ -1,8 +1,8 @@
 <style>
     .alert-info {
-        margin: 1em;
-        padding: 1em;
-        border-radius: 1em;
+        margin: 0.3em;
+        padding: 0.8em;
+        border-radius: 5px;
         font-size: 1.5em;
     }
     .btn-check-stress {
@@ -11,21 +11,36 @@
         /*left: 30%;*/
         font-size: x-large;
     }
+
     .schedule-head-title {
         font-size: x-large;
-        color: beige;
+        color: #FFFFFF;
     }
 
     #go_destress_button{
-        background-color: #00bcd4;
-        border-color: transparent;
-        font-size: 100%;
+        background-color: #2BBFBE;
+        border-color: #2BBFBE;
+        font-size: 110%;
     }
 
     #btn_home{
         background-color: #bbbfc0;
-        border-color: transparent;
-        font-size: 100%;
+        border-color: #bbbfc0;
+        font-size: 110%;
+    }
+
+    .alert-info{
+        background-color: #FFFFFF;
+        color: #1f4258;
+    }
+
+    #alert-font{
+        font-size: 80%;
+    }
+
+    #alert-plus{
+        height: 18px; width: 18px; overflow: hidden;
+        position: relative;
     }
 
 </style>
@@ -61,9 +76,9 @@
             {{/ifCond}}
             {{#ifCond total_activities '<=' 0}}
                 <div class="w3-round-jumbo alert-info">
-                    <p class="">
-                        You don't have any activities yet. You can add by clicking the <img class="plus" src="images/plus.svg">
-                        button.
+                    <p id="alert-font" class="">
+                        You don't have any activities yet. Click the <img id="alert-plus" class="plus" src="images/plus.svg">
+                            button to add a new activity.
                     </p>
 
                 </div>
