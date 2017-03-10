@@ -36,6 +36,13 @@
 
     .btn-primary {
         background-color: #00bcd4;
+        border-color: #00bcd4;
+    }
+
+    .btn-default {
+        background-color: #bbbfc0;
+        border-color: #bbbfc0;
+        color: #ffffff;
     }
 
 </style>
@@ -85,7 +92,7 @@
         </div>
 
         <div class="alert alert-danger" id="date_warning" hidden="true">
-            Please input time of activity for the future
+            Please input a time for your activity.
         </div>
 
 
@@ -96,7 +103,8 @@
                     <input type="range" class="col-md-4 form-control" id="stress_level" value="{{stress_level}}"
                            name="stress_level"
                            title="Stress Level"
-                           data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="{{stress_level}}"/>
+                           data-slider-id='ex1Slider' data-slider-min="1" data-slider-max="100" data-slider-step="1"
+                                data-slider-value="{{stress_level}}"/>
                 {{/with}}
             {{else}}
                 {{#if alternative}}
@@ -124,7 +132,7 @@
                            data-slider-step="1"
                            data-slider-value="50"/>
                     <div class="stress-instruct">
-                        "Please select a value for your stress level. 0 means a stress-free activity, 100 means an incredibly stressful activity"
+                        "Please select a stress-level for your activity.
                     </div>
                 {{/if}}
             {{/if}}
