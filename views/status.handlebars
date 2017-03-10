@@ -40,6 +40,10 @@
     .container{
         color: #ffffff;
     }
+
+    .schedule-head-title{
+        font-size: 170%;
+    }
 </style>
 
 <div class="container data-background">
@@ -123,6 +127,8 @@
             getHistory();
         </script>
     </div>
+
+    <label class="col-md-8 schedule-head-title" for="">Your Schedule History</label>
     {{#each hist}}
         <div class="container activity hvr-glow past-activity">
             <p class="schedule-title">{{ title }}</p>
