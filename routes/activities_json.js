@@ -50,16 +50,60 @@ exports.removeDestress = function (req, res) {
     res.json(destress);
 };
 
+function format_time(date_obj) {
+    // formats a javascript Date object into a 12h AM/PM time string
+    var hour = date_obj.getHours();
+    var minute = date_obj.getMinutes();
+    var amPM = (hour > 11) ? "pm" : "am";
+    if(hour > 12) {
+        hour -= 12;
+    } else if(hour == 0) {
+        hour = "12";
+    }
+    if(minute < 10) {
+        minute = "0" + minute;
+    }
+    return hour + ":" + minute + " " + amPM;
+}
+
+Date.prototype.yyyymmdd = function() {
+    var mm = this.getMonth() + 1; // getMonth() is zero-based
+    var dd = this.getDate();
+
+    return [this.getFullYear(),
+        (mm>9 ? '' : '0') + mm,
+        (dd>9 ? '' : '0') + dd
+    ].join('');
+};
+
 exports.doDestress = function (req, res) {
+
     let val = parseInt(req.body.value);
+    let now = new Date();
+    let time = format_time(now);
+    let date = now.yyyymmdd();
+
     data.total_stress = data.total_stress - val;
     if (data.total_stress < 0) {
         data.total_stress = 0;  // prevent negative stress value
     }
 
+    let new_hist = { 'title': req.body.message,
+        'date': date ,
+        'time': time,
+        'stress_level': -val,
+        'total_stress': data.total_stress,
+        'date_object': now
+    };
+    hist.push( new_hist );
+
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
         if (err) throw err;
         console.log('Activity is saved!');
+    });
+    fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('history is saved!');
     });
 };
 

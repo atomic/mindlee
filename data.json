@@ -1,16 +1,8 @@
 {
-	"total_activities": 1,
-	"next_activity_id": 18,
-	"total_stress": 118,
-	"activities": {
-		"13": {
-			"title": "midterm",
-			"date": "2017-03-16",
-			"time": "9:55 PM",
-			"stress_level": "67",
-			"date_object": "2017-03-17T04:55:00.000Z"
-		}
-	},
+	"total_activities": 0,
+	"next_activity_id": 2,
+	"total_stress": 90,
+	"activities": {},
 	"advices": [
 		{
 			"priority": "10",
@@ -52,6 +44,5 @@
 			"priority": "500",
 			"message": "Schedule appointment with therapist"
 		}
-	],
-	"name": "test"
+	]
 }

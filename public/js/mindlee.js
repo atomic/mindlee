@@ -84,8 +84,9 @@ function doDestress(e) {
     e.preventDefault();
     let $de_activity = $(this).closest('.activity');
     let destress_value = -(parseInt($de_activity.find('p.text-activity-reduce').text()));
-    console.log('destress_value' + destress_value);
-    $.post('/do_destress', { value: destress_value } , function (req, res) {
+    let destress_msg =  $de_activity.find('p.message').text();
+
+    $.post('/do_destress', { value: destress_value , message: destress_msg} , function (req, res) {
         console.log('destress complete');
     });
     window.location.replace("/destress");

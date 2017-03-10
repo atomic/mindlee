@@ -6,37 +6,5 @@
 		"stress_level": "27",
 		"total_stress": "27",
 		"date_object": "2017-02-26T16:00:00.000Z"
-	},
-	{
-		"title": "Midterm",
-		"date": "2017-02-26",
-		"time": "2:00 PM",
-		"stress_level": "62",
-		"total_stress": "62",
-		"date_object": "2017-02-26T22:00:00.000Z"
-	},
-	{
-		"title": "Coffee",
-		"date": "2017-02-27",
-		"time": "2:00 PM",
-		"stress_level": "24",
-		"total_stress": "24",
-		"date_object": "2017-02-27T22:00:00.000Z"
-	},
-	{
-		"title": "Pay Rent",
-		"date": "2017-02-27",
-		"time": "4:00 PM",
-		"stress_level": "78",
-		"total_stress": "78",
-		"date_object": "2017-02-28T00:00:00.000Z"
-	},
-	{
-		"title": "Phone Interview",
-		"date": "2017-02-27",
-		"time": "7:00 PM",
-		"stress_level": "61",
-		"total_stress": "61",
-		"date_object": "2017-02-28T03:00:00.000Z"
 	}
 ]

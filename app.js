@@ -94,7 +94,8 @@ var jsonParser = bodyParser.json();
 app.get('/'                , login.view);
 app.get('/home'            , home.view);
 app.get('/landing'         , home.landingView);
-app.get('/add'             , jsonParser, add.add_view);
+// app.get('/add'             , jsonParser, add.add_view);
+app.get('/add'             , jsonParser, add.add_view_B);
 app.get('/edit'            , jsonParser, add.edit_view);
 
 
