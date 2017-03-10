@@ -45,6 +45,10 @@
 		{
 			"message": "Play video game",
 			"stress_reduce": "50"
+		},
+		{
+			"message": "play a game",
+			"stress_reduce": "78"
 		}
 	]
 }

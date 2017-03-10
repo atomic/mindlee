@@ -210,11 +210,11 @@ h1.text-danger {
 
 /*add activity page */
 #ex1Slider .slider-selection {
-    background: rgba(248, 177, 149, 0.55);
+    background: rgba(0, 210, 212, 0.39);
 }
 
 #ex1Slider .slider-handle{
-    background-color: #ff8967;
+    background-color: #00d2d4;
     background-image: none;
 }
 
@@ -222,7 +222,6 @@ h1.text-danger {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
-
 }
 
 /* default CSS */
@@ -238,7 +237,7 @@ h1.text-danger {
 #mindlee-name {
     margin-top: 0.7%;
     text-align: center;
-    padding-left: 1.4em;
+    padding-left: 1.3em;
     font-size: 400%;
 }
 
@@ -349,11 +348,36 @@ div.page-header {
 
 
 /*schedule page css*/
+.schedule-title{
+    color: #ffffff;
+    font-size: 230%;
+}
+
+.stress_level{
+    margin-left: 11.2em;
+    font-size: 180%;
+    color: #7cff87;
+}
+
+.act_date{
+    font-size: 110%;
+}
+
+.act_time{
+    font-size: 110%;
+}
+
+.on-same-line{
+    display: inline-block;
+}
+
 
 /*fixing "go to stress level button placement*/
 .btn-group-justified{ /*bootstrap class extended*/
     padding-top:3em;
 }
+
+
 
 
 /*stress page css*/

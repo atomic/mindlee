@@ -18,8 +18,9 @@
     }
 
     #go_destress_button{
-        background-color: #00d2d4;
-        border-color: #00d2d4;
+        background-color: #7cff87;
+        border-color: #7cff87;
+        color: rgb(59, 33, 119);
         font-size: 110%;
     }
 
@@ -43,11 +44,17 @@
         position: relative;
     }
 
+    #edit-button{
+        background-color: #bbbfc0;
+        border-color: #bbbfc0;
+        color: #FFFFFF;
+    }
+
 </style>
 <div class="main-content container">
 
     <div class="row container page-header">
-        <label class="col-md-8 schedule-head-title" for="">Your Schedules</label>
+        <label class="col-md-8 schedule-head-title" for="">Your Schedule</label>
         <form class="col-md-1" action="/add" style="float: right">
             <button class="btn btn-success btn-group-lg"><img type="submit" class="plus" src="images/plus.svg" alt=""></button>
         </form>
@@ -59,14 +66,15 @@
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
                     <div class="container activity hvr-glow hvr-sweep-to-left" data-id={{@key}}>
-                        <p id="schedule-title">Title: {{ title }}</p>
+                        <span class="schedule-title">{{ title }}</span>
+                        <span class="stress_level">Stress: {{stress_level}}</span>
                         <p class="act_date">Date: {{date}}</p>
                         <p class="act_time">Time: {{time}}</p>
-                        <p class="stress_level">Stress Level: {{stress_level}}</p>
+
                         <div class="text-right">
                             <form action="/edit">
                                 <input hidden=true type="text" name="id" id="edit_id" value={{@key}}>
-                                <button type="submit" class="btn">Edit</button>
+                                <button type="submit" id="edit-button" class="btn">Edit</button>
                                 <button style="margin-left: 3%;" class="btn btn-danger btn-delete-act">Delete</button>
                             </form>
                             <!--button is hooked to POST request in mindlee.js-->
