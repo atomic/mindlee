@@ -50,6 +50,7 @@
         color: #FFFFFF;
     }
 
+
 </style>
 <div class="main-content container">
 
@@ -66,19 +67,21 @@
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
                     <div class="container activity hvr-glow hvr-sweep-to-left" data-id={{@key}}>
-                        <span class="schedule-title">{{ title }}</span>
-                        <span class="stress_level">Stress: {{stress_level}}</span>
-                        <p class="act_date">Date: {{date}}</p>
-                        <p class="act_time">Time: {{time}}</p>
-
-                        <div class="text-right">
-                            <form action="/edit">
-                                <input hidden=true type="text" name="id" id="edit_id" value={{@key}}>
-                                <button type="submit" id="edit-button" class="btn">Edit</button>
-                                <button style="margin-left: 3%;" class="btn btn-danger btn-delete-act">Delete</button>
-                            </form>
-                            <!--button is hooked to POST request in mindlee.js-->
+                        <span class="schedule-title" style="font-weight: bold">{{ title }}</span>
+                        <span class="stress_level" style="font-weight: bold">Stress: {{stress_level}}</span>
+                        <div class="schedule-row">
+                            <label class="act_date">{{date}}</label>
+                            <label class="act_time">{{time}}</label>
+                            <div class="text-right">
+                                <form action="/edit">
+                                    <input hidden=true type="text" name="id" id="edit_id" value={{@key}}>
+                                    <button type="submit" id="edit-button" class="btn">Edit</button>
+                                    <button style="margin-left: 3%;" class="btn btn-danger btn-delete-act">Delete</button>
+                                </form>
+                                <!--button is hooked to POST request in mindlee.js-->
+                            </div>
                         </div>
+
                     </div>
                 {{/each}}
             {{/ifCond}}

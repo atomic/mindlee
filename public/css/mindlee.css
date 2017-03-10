@@ -35,7 +35,7 @@ body {
     padding-top: 10%;
     width: 100%;
 }
-;
+
 .contact-content{
     padding-top:120px;
 }
@@ -354,17 +354,19 @@ div.page-header {
 }
 
 .stress_level{
-    margin-left: 11.2em;
+    float: right;
+    margin-top: 2%;
     font-size: 180%;
     color: #7cff87;
 }
 
-.act_date{
+.act_date, .act_time {
+    flex: 1;
     font-size: 110%;
+    font-weight: bold;
 }
-
-.act_time{
-    font-size: 110%;
+.text-right {
+    flex: 1.5;
 }
 
 .on-same-line{
@@ -379,6 +381,10 @@ div.page-header {
 
 
 
+
+.schedule-row {
+    display: flex;
+}
 
 /*stress page css*/
 
