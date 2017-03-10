@@ -17,10 +17,42 @@
 	},
 	{
 		"title": "Listen to calm music for 10 minutes",
-		"date": "20170310",
+		"date": "2017-03-10",
 		"time": "12:02 am",
 		"stress_level": -40,
 		"total_stress": 44,
 		"date_object": "2017-03-10T08:02:53.584Z"
+	},
+	{
+		"title": "Finishing A9",
+		"date": "2017-03-10",
+		"time": "6:10 AM",
+		"stress_level": "75",
+		"date_object": "2017-03-10T14:10:00.000Z",
+		"total_stress": 99
+	},
+	{
+		"title": "Launching an App",
+		"date": "2017-03-10",
+		"time": "5:10 AM",
+		"stress_level": "50",
+		"date_object": "2017-03-10T13:10:00.000Z",
+		"total_stress": 149
+	},
+	{
+		"title": "Take 15 deep breaths",
+		"date": "2017-03-10",
+		"time": "10:07 am",
+		"stress_level": -30,
+		"total_stress": 119,
+		"date_object": "2017-03-10T18:07:47.974Z"
+	},
+	{
+		"title": "Interview with Google",
+		"date": "2017-03-10",
+		"time": "10:15 AM",
+		"stress_level": "75",
+		"date_object": "2017-03-10T18:15:00.000Z",
+		"total_stress": 194
 	}
 ]

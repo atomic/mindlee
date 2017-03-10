@@ -350,13 +350,12 @@ div.page-header {
 /*schedule page css*/
 .schedule-title{
     color: #ffffff;
-    font-size: 230%;
+    font-size: 170%;
 }
 
 .stress_level{
     float: right;
-    margin-top: 2%;
-    font-size: 180%;
+    font-size: 140%;
     color: #7cff87;
 }
 
