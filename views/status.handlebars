@@ -27,6 +27,19 @@
     .tick > text{
         color: #00E8FF;
     }
+
+    .stress_level{
+        margin-left: 11em;
+        font-size: 150%;
+    }
+
+    .schedule-title{
+        font-size: 200%;
+    }
+
+    .container{
+        color: #ffffff;
+    }
 </style>
 
 <div class="container data-background">
@@ -112,7 +125,7 @@
     </div>
     {{#each hist}}
         <div class="container activity hvr-glow past-activity">
-            <p>Title: {{ title }}</p>
+            <p class="schedule-title">{{ title }}</p>
             <p class="act_date">Date: {{date}}</p>
             <p class="act_time">Time: {{time}}</p>
             <p class="stress_level">Stress Level: {{stress_level}}</p>
