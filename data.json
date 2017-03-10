@@ -1,8 +1,37 @@
 {
-	"total_activities": 0,
-	"next_activity_id": 2,
-	"total_stress": 90,
-	"activities": {},
+	"total_activities": 4,
+	"next_activity_id": 6,
+	"total_stress": 24,
+	"activities": {
+		"2": {
+			"title": "Finishing A9",
+			"date": "2017-03-10",
+			"time": "6:10 AM",
+			"stress_level": "75",
+			"date_object": "2017-03-10T14:10:00.000Z"
+		},
+		"3": {
+			"title": "Launching an App",
+			"date": "2017-03-10",
+			"time": "5:10 AM",
+			"stress_level": "50",
+			"date_object": "2017-03-10T13:10:00.000Z"
+		},
+		"4": {
+			"title": "Interview with Google",
+			"date": "2017-03-10",
+			"time": "10:15 AM",
+			"stress_level": "75",
+			"date_object": "2017-03-10T18:15:00.000Z"
+		},
+		"5": {
+			"title": "Negotiating Salary",
+			"date": "2017-03-11",
+			"time": "3:15 PM",
+			"stress_level": "25",
+			"date_object": "2017-03-11T23:15:00.000Z"
+		}
+	},
 	"advices": [
 		{
 			"priority": "10",
@@ -44,5 +73,6 @@
 			"priority": "500",
 			"message": "Schedule appointment with therapist"
 		}
-	]
+	],
+	"name": "test"
 }
