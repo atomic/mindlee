@@ -28,13 +28,15 @@
         color: #00E8FF;
     }
 
-    .stress_level{
-        margin-left: 11em;
-        font-size: 150%;
+    .flex-activity-right {
+        font-size: 120%;
+        font-weight: bold;
+        flex: 1;
     }
-
-    .schedule-title{
-        font-size: 200%;
+    .flex-activity-left {
+        flex: 2.4;
+        float: right;
+        font-weight: bold;
     }
 
     .container{
@@ -43,6 +45,9 @@
 
     .schedule-head-title{
         font-size: 170%;
+    }
+    .flex-activity {
+        display: flex;
     }
 </style>
 
@@ -130,12 +135,18 @@
 
     <label class="col-md-8 schedule-head-title" for="">Your Schedule History</label>
     {{#each hist}}
-        <div class="container activity hvr-glow past-activity">
-            <p class="schedule-title">{{ title }}</p>
-            <p class="act_date">Date: {{date}}</p>
-            <p class="act_time">Time: {{time}}</p>
-            <p class="stress_level">Stress Level: {{stress_level}}</p>
-            <p class="total_stress">Total stress: {{total_stress}}</p>
+        <div class="container activity hvr-glow hvr-sweep-to-left">
+            <span class="schedule-title">{{ title }}</span>
+            <div class="container flex-activity">
+                <div class="container flex-activity-left">
+                    <p class="act_date">Date: {{date}}</p>
+                    <p class="act_time">Time: {{time}}</p>
+                </div>
+                <div class="flex-activity-right">
+                    <span style="color: #90f690;;">Stress Level: {{stress_level}}</span>
+                    <p class="total_stress" style="color: #7cffe4">Total stress: {{total_stress}}</p>
+                </div>
+            </div>
         </div>
     {{/each}}
 </div>
