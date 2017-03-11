@@ -82,11 +82,25 @@ exports.doDestress = function (req, res) {
     let now = new Date();
     let time = format_time(now);
     let date = now.yyyymmdd();
+    let minstress = false;
 
     data.total_stress = data.total_stress - val;
     if (data.total_stress < 0) {
         data.total_stress = 0;  // prevent negative stress value
+        minstress = true;
     }
+
+
+    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
+        if (err) throw err;
+        console.log('Activity is saved!');
+    });
+
+    if (minstress) {
+        res.json( {} );
+        return;
+    }
+
 
     let new_hist = { 'title': req.body.message,
         'date': date ,
@@ -95,16 +109,14 @@ exports.doDestress = function (req, res) {
         'total_stress': data.total_stress,
         'date_object': now
     };
-    hist.push( new_hist );
 
-    fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
-        if (err) throw err;
-        console.log('Activity is saved!');
-    });
+    hist.push( new_hist );
     fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
         if (err) throw err;
         console.log('history is saved!');
     });
+
+    res.json(new_hist);
 };
 
 exports.storeName = function (req, res) {

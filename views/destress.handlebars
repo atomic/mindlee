@@ -60,20 +60,10 @@
     }
 
     .btn-do {
+        background-color: #00d2d4;
         margin-left: 2em;
         color: black;
         font-weight: bold;
-    }
-
-    .btn-success{
-        background-color: #00d2d4;
-        border-color: transparent;
-        font-size: 90%;
-    }
-
-    .activity-value{
-        font-size: 80%
-        vertical-align: middle;
     }
 
     .btn-danger {
@@ -89,6 +79,12 @@
     }
     .custom-btn-group .btn {
         margin: auto 0.3em;
+    }
+
+    .modal-body p {
+        font-size: 1em;
+        line-height: 1em;
+        padding: 15px 0;
     }
 </style>
 
@@ -119,7 +115,7 @@
                     <p class="col-xs-1 text-activity-reduce">-{{ stress_reduce }}</p>
 
                     <div class="text-right col-xs-4">
-                        <button class="btn btn-success btn-do">Do</button>
+                        <button class="btn btn-do">Do</button>
                     </div>
                 </div>
             </div>
@@ -132,7 +128,7 @@
                     <p class="col-xs-1 text-activity-reduce">-{{ stress_reduce }}</p>
 
                     <div class="text-right col-xs-2 custom-btn-group">
-                            <button class="btn btn-success btn-do">Do</button>
+                            <button class="btn btn-do">Do</button>
                             <!--button is hooked to POST request in mindlee.js-->
                             <button class="btn btn-destress-delete btn-danger">Delete</button>
                             <!--button is hooked to POST request in mindlee.js-->
@@ -175,7 +171,7 @@
                 <p id="modal-body"></p>
             </div>
             <div class="modal-footer">
-                <h3>Modal Footer</h3>
+                <h3>  </h3>
             </div>
         </div>
     </div>
@@ -183,24 +179,41 @@
 </div>
 
 <script>
+
+    // Get the modal
+    var modal = $('#myModal');
+
+    // Get the button that opens the modal
+    var btn = $("#myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = $(".close")[0];
+
     function doDestress(e) {
         e.preventDefault();
         let $de_activity = $(this).closest('.activity');
         let destress_value = -(parseInt($de_activity.find('p.text-activity-reduce').text()));
         let destress_msg =  $de_activity.find('p.message').text();
 
-        $.post('/do_destress', { value: destress_value , message: destress_msg} , function (req, res) {
-            $("#modal-body").text('Stress level reduced by : ' + destress_value);
-            $("#myBtn").click();
+        $.post('/do_destress', { value: destress_value , message: destress_msg} , function (new_hist, res) {
+            if ($.isEmptyObject(new_hist)) {
+                console.log('no more stress to destress');
+            } else {
+                $("#modal-body").text('Stress level reduced by : ' + destress_value);
+                modal.show();
+                $("#stress-level").text(new_hist.total_stress);
+            }
+        }).fail( function () {
+            alert('failed');
         });
-        window.location.replace("/destress");
+//        window.location.replace("/destress");
     }
 
     function deleteDestressActivity(e) {
         e.preventDefault();
 
         let $de_activity = $(this).closest('.activity');
-        let $destress_message = $de_activity.find('p.message');
+        let $destress_message = $de_activity.find('p.messag');
         console.log($destress_message.text());
         let msg = $destress_message.text();
 
@@ -216,15 +229,6 @@
     $(".btn-destress-delete").click(deleteDestressActivity);
     $(".btn-do").click(doDestress);
 
-    // Get the modal
-    var modal = $('#myModal');
-
-    // Get the button that opens the modal
-    var btn = $("#myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = $(".close")[0];
-
     // When the user clicks the button, open the modal
     btn.click(function() { modal.show(); });
 
@@ -233,7 +237,9 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-        if (event.target == modal) { modal.toggle(display); }
+        if (modal.is(':visible')) {
+            modal.fadeOut();
+        }
     };
 
 </script>
