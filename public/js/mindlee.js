@@ -82,10 +82,10 @@ function checkDeletion(request, response) {
     console.log('check deletion fired');
     $.post('/check_activity', function (deleted) {
         console.log('client checking activities');
-        console.log(deleted);
         if(deleted) {
-            // location.reload();
-            window.location.replace("/schedule");
+            console.log('some activities are deleted.');
+            history.go(0);
+            // window.location.replace("/schedule");
         }
     });
 }
