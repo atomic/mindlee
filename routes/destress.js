@@ -24,6 +24,5 @@ exports.addDestress = function (req, res) {
         console.log('New de-stress activity is saved!');
     });
 
-
-    res.render('destress', { link:'/destress', title: 'Destress', 'destress' : destress});
+    res.redirect('destress');
 };

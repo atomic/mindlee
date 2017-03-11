@@ -28,20 +28,14 @@ exports.addActivity = function (req, res) {
 
     data.total_activities++;
     data.next_activity_id++;
-    // data.total_stress = total_stress + parseInt(stress_level);
-
-    // console.log(data.activities);
-    // fs.writeFile('../data.json', JSON.stringify(data), function (err) {
-    //     if(err) throw err;
-    // });
 
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
         if (err) throw err;
         console.log('Activity is saved!');
     });
 
-
-    res.render('schedule', {title: 'Schedule', 'data' : data} );
+    // res.render('schedule', {title: 'Schedule', 'data' : data} );
+    res.redirect('schedule');
 };
 
 exports.editActivity = function (req, res) {

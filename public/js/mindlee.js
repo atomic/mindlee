@@ -85,7 +85,7 @@ function checkDeletion(request, response) {
         if(deleted) {
             console.log('some activities are deleted.');
             history.go(0);
-            // window.location.replace("/schedule");
+            // window.location = window.location.pathname;
         }
     });
 }
