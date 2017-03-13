@@ -100,7 +100,8 @@
 
                 var line = d3.svg.line()
                         .x(function(d) {
-                            return xScale(new Date(d.date_object));
+                            let mydate = new Date(d.date.replace(/-/g, "/") + ' ' + d.time);
+                            return xScale(mydate);
                         })
                         .y(function(d) {
                             return yScale(d.total_stress);

@@ -125,7 +125,7 @@ exports.getHistory = function (req, res) {
 function deleteActivity(id, safe) {
     let stress = parseInt(data.activities[id].stress_level);
     data.activities[id].total_stress = data.total_stress + stress;
-    data.activities[id].date_object = new Date(data.activities[id].date.replace(/-/g, "/") + ' ' + data.activities[id].time);
+    // data.activities[id].date_object = new Date(data.activities[id].date.replace(/-/g, "/") + ' ' + data.activities[id].time);
     hist.push( data.activities[id] );
 
     let tmp_activities = data.activities[id];
