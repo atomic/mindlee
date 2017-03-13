@@ -91,8 +91,6 @@
         <div class="alert alert-danger" id="date_warning" hidden="true">
             Please input a time for your activity.
         </div>
-
-
         <div class="form-group text-center">
             <h4 class="panel-title text-danger">Stress Level</h4>
             {{#if is_edit}}
@@ -134,14 +132,11 @@
                 {{/if}}
             {{/if}}
         </div>
-
-
         <div class="text-center">
-            <a href="/schedule"> <input onclick="ga('send', 'event','cancel_add', 'click');" type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
-            <input onclick="ga('send', 'event', 'add', 'click');" type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
+            <a href="/schedule"> <input type="button" id="cancelAdd" class="btn-add-activity btn btn-default" value="Cancel" action="/"/> </a>
+            <input type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
         </div>
     </form>
-        </form>
     </div>
 </div>
 

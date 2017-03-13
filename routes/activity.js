@@ -5,12 +5,14 @@ var data = require("../data.json");
 var fs = require('fs');
 
 
-exports.addActivity = function (req, res) {
+var toLocalTime = function(time) {
+    var d = new Date(time);
+    var offset = (new Date().getTimezoneOffset() / 60) * -1;
+    var n = new Date(d.getTime() + offset);
+    return n;
+};
 
-    //
-    var total        = parseInt(data.total_activities);
-    var next_id      = parseInt(data.next_activity_id);
-    var total_stress = parseInt(data.total_stress);
+exports.addActivity = function (req, res) {
 
     var title =         req.query["title"];
     var date =          req.query["date"];
@@ -19,10 +21,8 @@ exports.addActivity = function (req, res) {
 
     // the date object from the activity
     var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
-
-    let now = new Date();
-
-    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": date_obj};
+    var local         = toLocalTime(date_obj);
+    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": local};
 
     data.activities[ data.next_activity_id ] = newact;
 
