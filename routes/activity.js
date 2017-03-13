@@ -14,8 +14,8 @@ exports.addActivity = function (req, res) {
     var stress_level =  req.query["stress_level"];
 
     // the date object from the activity
-    var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
-    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": date_obj};
+    // var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
+    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level};
 
     data.activities[ data.next_activity_id ] = newact;
 
@@ -40,13 +40,11 @@ exports.editActivity = function (req, res) {
     let edit_id = req.query["edit_id"];
 
     // the date object from the activity
-    let date_obj = new Date(date.replace(/-/g, "/") + ' ' + time);
     data.activities[edit_id] = {
         "title": title,
         "date": date,
         "time": time,
-        "stress_level": stress_level,
-        "date_object": date_obj
+        "stress_level": stress_level
     };
 
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {

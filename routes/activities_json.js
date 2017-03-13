@@ -23,24 +23,6 @@ exports.removeActivity = function (req, res) {
 };
 
 
-exports.checkActivity = function (req, res) {
-
-    let now = new Date();
-    let deleted = false;
-    for (let act_id in data.activities) {
-        let x = new Date(data.activities[act_id].date_object);
-        let diff = new Date(now - x);
-        console.log('now: ' + now + ', x: ' + x);
-        console.log('diff: ' + diff.getTime());
-        console.log('minutes difference : ' + diff.getMinutes());
-        if(diff.getTime() > 0) {
-            deleteActivity(act_id, false);
-            deleted = true;
-        }
-    }
-    res.send(deleted);
-};
-
 exports.removeDestress = function (req, res) {
     console.log('message : ' + req.body.message);
     destress.custom = destress.custom.filter(function(e){

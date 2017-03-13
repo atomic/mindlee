@@ -111,8 +111,9 @@ function checkActivity(activities) {
     let deleted = false;
 
     for (let act_id in activities) {
-        let x = new Date(activities[act_id].date_object);
-        x = toLocalTime(x);
+        let x = new Date(activities[act_id].date.replace(/-/g, "/") + ' ' + activities[act_id].time);
+        // let x = new Date(activities[act_id].date_object);
+        // x = toLocalTime(x);
         let diff = new Date(now - x);
 
         console.log('now: ' + now + ', x: ' + x);
