@@ -66,7 +66,7 @@
         {{#with data}}
             {{#ifCond total_activities '>' 0}}
                 {{#each activities}}
-                    <div class="container activity hvr-glow hvr-sweep-to-left" data-id={{@key}}>
+                    <div class="container activity hvr-glow hvr-sweep-to-left" id="{{@key}}" data-id={{@key}}>
                         <span class="schedule-title" style="font-weight: bold">{{ title }}</span>
                         <span class="stress_level" style="font-weight: bold">Stress: {{stress_level}}</span>
                         <div class="schedule-row">

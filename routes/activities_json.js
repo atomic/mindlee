@@ -6,17 +6,20 @@ var hist = require('../history.json');
 var destress = require('../destress.json');
 var fs = require("fs");
 
-exports.getJSON = function(req, res) {
-    // get a random palette from the top ones
-    // var randomPalette = palettes[Math.floor(palettes.length * Math.random())];
-    // res.send('Your random palette is called: ' + randomPalette['title']);
+exports.getActivities = function(req, res) {
     res.json(data.activities);
 };
 
+/**
+ * server method to remove an activity given a json containing id for activity to delete
+ *
+ * @param req: { id: .... }
+ * @param res:
+ */
 exports.removeActivity = function (req, res) {
-
-    deleteActivity(req.body.id, true);
-    res.json(data.activities);
+    let safe = (req.body.safe == 'true');
+    let deleted_activity = deleteActivity(req.body.id, safe );
+    res.json(deleted_activity);
 };
 
 
@@ -134,12 +137,15 @@ exports.getHistory = function (req, res) {
  *
  * @param id   : id of the activty that can be queried from json
  * @param safe : with safe option, stress will not increase upon deletion, if false, stress will increase
+ *
+ * return json of activity that was deleted
  */
 function deleteActivity(id, safe) {
     let stress = parseInt(data.activities[id].stress_level);
     data.activities[id].total_stress = data.total_stress + stress;
     hist.push( data.activities[id] );
 
+    let tmp_activities = data.activities[id];
     delete data.activities[id];
 
     data.total_activities--;
@@ -147,15 +153,12 @@ function deleteActivity(id, safe) {
         data.total_stress = data.total_stress + stress;
     }
 
-    console.log('(server) id to delete : ' + id);
-
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
         if (err) throw err;
-        console.log('Activity is saved!');
     });
 
     fs.writeFile('history.json', JSON.stringify(hist, null, '\t'), function (err) {
         if (err) throw err;
-        console.log('activity is saved!');
     });
+    return tmp_activities;
 }

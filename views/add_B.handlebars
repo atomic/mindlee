@@ -12,7 +12,6 @@
     .bootstrap-timepicker-widget.dropdown-menu {
         color: black;
     }
-
 </style>
 
 <body>
@@ -142,6 +141,7 @@
             <input onclick="ga('send', 'event', 'add', 'click');" type="submit" id="submitBtn" class="btn-add-activity btn btn-primary" value="Save"/>
         </div>
     </form>
+        </form>
     </div>
 </div>
 
@@ -183,17 +183,6 @@
         disableFocus: true,
         explicitMode: true
     });
-
-    // With JQuery
-        {{#unless alternative}}
-        $('#stress_level').slider({
-            formatter: function(value) {
-                return 'Current value: ' + value;
-            },
-//        tooltip: 'always'
-        });
-        {{/unless}}
-
     $("#date").on("change", checkValidTime);
     $("#time").on("change", checkValidTime);
 

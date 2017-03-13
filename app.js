@@ -107,6 +107,7 @@ app.get('/edit'            , jsonParser, add.edit_view);
 app.get('/add_activity'    , jsonParser, activity.addActivity);
 app.get('/edit_activity'    , jsonParser, activity.editActivity);
 app.get('/thanks'          , thanks.view    );
+app.get('/activities_json' , activities_json.getActivities);
 
 
 app.post('/delete_activity' , jsonParser, activities_json.removeActivity);

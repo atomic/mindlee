@@ -45,7 +45,7 @@ function deleteActivity(e) {
     var activity_id = $activity.data('id');
 
     // AJAX
-    $.post('/delete_activity', { id: activity_id}, function (req, res) {
+    $.post('/delete_activity', { id: activity_id, safe: true}, function (req, res) {
         $activity.fadeOut();
     });
 }
@@ -80,13 +80,45 @@ function showReminder(e) {
 function checkDeletion(request, response) {
     // e.preventDefault();
     console.log('check deletion fired');
-    $.post('/check_activity', function (deleted) {
-        console.log('client checking activities');
-        if(deleted) {
-            console.log('some activities are deleted.');
+
+    $.get('/activities_json', function (activities) {
+        console.log('checking at : ' + window.location.pathname);
+        let deleted = checkActivity(activities);
+        if (deleted && (window.location.pathname != '/schedule')) {
             history.go(0);
-            // window.location = window.location.pathname;
         }
     });
+
+    // $.post('/check_activity', function (deleted) {
+    //     console.log('client checking activities');
+    //     if(deleted) {
+    //         console.log('some activities are deleted.');
+    //         history.go(0);
+    //         // window.location = window.location.pathname;
+    //     }
+    // });
 }
 
+function checkActivity(activities) {
+    let now = new Date();
+    let deleted = false;
+
+    for (let act_id in activities) {
+        let x = new Date(activities[act_id].date_object);
+        let diff = new Date(now - x);
+
+        console.log('now: ' + now + ', x: ' + x);
+        console.log('diff: ' + diff.getTime());
+        console.log('minutes difference : ' + diff.getMinutes());
+
+        if(diff.getTime() >= 0) {
+            $.post('/delete_activity', { id: act_id, safe: false}, function (req, res) {
+                console.log('an activity is deleted in the server');
+                console.log(req);
+                $('#' + act_id).fadeOut();
+            });
+            deleted = true;
+        }
+    }
+    return deleted;
+}
