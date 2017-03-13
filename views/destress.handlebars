@@ -194,8 +194,11 @@
         let $de_activity = $(this).closest('.activity');
         let destress_value = -(parseInt($de_activity.find('p.text-activity-reduce').text()));
         let destress_msg =  $de_activity.find('p.message').text();
+        let now = new Date();
+        let date = now.yyyymmdd();
+        let time = format_time(now);
 
-        $.post('/do_destress', { value: destress_value , message: destress_msg} , function (new_hist, res) {
+        $.post('/do_destress', { value: destress_value , message: destress_msg, 'now': now, 'date': date, 'time': time} , function (new_hist, res) {
             if ($.isEmptyObject(new_hist)) {
                 console.log('no more stress to destress');
             } else {

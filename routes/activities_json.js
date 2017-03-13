@@ -35,38 +35,12 @@ exports.removeDestress = function (req, res) {
     res.json(destress);
 };
 
-function format_time(date_obj) {
-    // formats a javascript Date object into a 12h AM/PM time string
-    var hour = date_obj.getHours();
-    var minute = date_obj.getMinutes();
-    var amPM = (hour > 11) ? "pm" : "am";
-    if(hour > 12) {
-        hour -= 12;
-    } else if(hour == 0) {
-        hour = "12";
-    }
-    if(minute < 10) {
-        minute = "0" + minute;
-    }
-    return hour + ":" + minute + " " + amPM;
-}
-
-Date.prototype.yyyymmdd = function() {
-    var mm = this.getMonth() + 1; // getMonth() is zero-based
-    var dd = this.getDate();
-
-    return [this.getFullYear(),
-        (mm>9 ? '' : '0') + mm,
-        (dd>9 ? '' : '0') + dd
-    ].join('-');
-};
-
 exports.doDestress = function (req, res) {
 
     let val = parseInt(req.body.value);
-    let now = new Date();
-    let time = format_time(now);
-    let date = now.yyyymmdd();
+    let now = req.body.now;
+    let time = req.body.time;
+    let date = req.body.date;
     let minstress = false;
 
     data.total_stress = data.total_stress - val;
