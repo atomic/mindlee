@@ -5,12 +5,6 @@ var data = require("../data.json");
 var fs = require('fs');
 
 
-var toLocalTime = function(time) {
-    var d = new Date(time);
-    var offset = (new Date().getTimezoneOffset() / 60) * -1;
-    var n = new Date(d.getTime() + offset);
-    return n;
-};
 
 exports.addActivity = function (req, res) {
 
@@ -21,8 +15,7 @@ exports.addActivity = function (req, res) {
 
     // the date object from the activity
     var date_obj      =   new Date(date.replace(/-/g, "/") + ' ' + time);
-    var local         = toLocalTime(date_obj);
-    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": local};
+    var newact = { "title": title, "date": date, "time": time, "stress_level": stress_level, "date_object": date_obj};
 
     data.activities[ data.next_activity_id ] = newact;
 

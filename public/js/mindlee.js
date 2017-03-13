@@ -99,12 +99,20 @@ function checkDeletion(request, response) {
     // });
 }
 
+var toLocalTime = function(time) {
+    var d = new Date(time);
+    var offset = (new Date().getTimezoneOffset() / 60) * -1;
+    var n = new Date(d.getTime() + offset);
+    return n;
+};
+
 function checkActivity(activities) {
     let now = new Date();
     let deleted = false;
 
     for (let act_id in activities) {
         let x = new Date(activities[act_id].date_object);
+        x = toLocalTime(x);
         let diff = new Date(now - x);
 
         console.log('now: ' + now + ', x: ' + x);
