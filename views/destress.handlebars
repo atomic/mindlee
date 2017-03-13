@@ -199,9 +199,13 @@
             if ($.isEmptyObject(new_hist)) {
                 console.log('no more stress to destress');
             } else {
+                let new_stress = parseFloat(new_hist.total_stress);
                 $("#modal-body").text('Stress level reduced by : ' + destress_value);
                 modal.show();
-                $("#stress-level").text(new_hist.total_stress);
+                $("#stress-level").text(new_stress);
+//                    "background-color", "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);"
+//                $("body").css( "background-color", "blue" );
+//                console.log("linear-gradient(to bottom, rgba(" + new_stress*2 + "," + 256 - (new_stress*2) + ",132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);");
             }
         }).fail( function () {
             alert('failed');
