@@ -57,7 +57,7 @@
 <div class="container data-background">
 
     <div class="container main-content">
-        <svg id="visualisation" width="1000" height="500"></svg>
+        <svg id="visualisation" width="1000" height="550"></svg>
         <script>
             function InitChart(hist) {
 
@@ -67,10 +67,10 @@
                 mindate.setDate(mindate.getDate() - 3);
 
                 var vis = d3.select("#visualisation"),
-                        WIDTH = 400,
-                        HEIGHT = 400,
+                        WIDTH = $(window).width(),
+                        HEIGHT = 500,
                         MARGINS = {
-                            top: 20,
+                            top: 10,
                             right: 20,
                             bottom: 20,
                             left: 30
@@ -133,7 +133,13 @@
                 });
             }
 
+            function resizeChart() {
+                $("#visualization").remove();
+                getHistory();
+            }
+
             getHistory();
+//            $(window).resize( resizeChart );
         </script>
     </div>
 
