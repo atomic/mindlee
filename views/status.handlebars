@@ -57,7 +57,7 @@
 <div class="container data-background">
 
     <div class="container main-content">
-        <svg id="visualisation" width="1000" height="550"></svg>
+        <svg id="visualisation" width="1000" height="450"></svg>
         <script>
             function InitChart(hist) {
 
@@ -68,17 +68,17 @@
 
                 var vis = d3.select("#visualisation"),
                         WIDTH = $(window).width(),
-                        HEIGHT = 500,
+                        HEIGHT = 400,
                         MARGINS = {
-                            top: 10,
+                            top: 0,
                             right: 20,
-                            bottom: 20,
+                            bottom: 10,
                             left: 30
                         },
 
                         xScale = d3.time.scale().range([MARGINS.left, WIDTH - MARGINS.right]).domain([mindate, maxdate]),
 
-                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 120]),
+                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([0, 150]),
 
                         xAxis = d3.svg.axis()
                                 .scale(xScale),
