@@ -109,6 +109,9 @@ function deleteActivity(id, safe) {
     if (!safe) {
         data.total_stress = data.total_stress + stress;
     }
+    if (Object.keys(data.activities).length === 0 && data.activities.constructor === Object) {
+        data.total_activities = 0;
+    }
 
     fs.writeFile('data.json', JSON.stringify(data, null, '\t'), function (err) {
         if (err) throw err;
