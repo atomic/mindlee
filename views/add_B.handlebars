@@ -89,7 +89,7 @@
         </div>
 
         <div class="alert alert-danger" id="date_warning" hidden="true">
-            Please input a time for your activity.
+            Please input a future time for your activity.
         </div>
         <div class="form-group text-center">
             <h4 class="panel-title text-danger">Stress Level</h4>
@@ -189,7 +189,7 @@
         console.log('date changed : ' + $("#date").val() + '  , date: ' + mydate);
         console.log('now : ' + now);
         console.log(now - mydate);
-        if (now - mydate >= 0) {
+        if (now - mydate >= 50000) {
 //            alert("Please enter future date");
             $("#date_warning").show();
             if ($(this).is("#date")) {
