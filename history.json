@@ -1,2 +1,17 @@
 [
+  
+  {
+ 		"title": "Wake Up",
+ 		"date": "2017-03-17",
+ 		"time": "9:00 AM",
+ 		"stress_level": "0",
+ 		"total_stress": "0"
+ 	},
+  {
+ 		"title": "Last Group Meeting",
+ 		"date": "2017-03-17",
+ 		"time": "11:00 AM",
+ 		"stress_level": "30",
+ 		"total_stress": "30"
+ 	}
 ]
