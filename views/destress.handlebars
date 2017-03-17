@@ -210,11 +210,11 @@
 //                console.log("linear-gradient(to bottom, rgba(" + new_stress*2 + "," + 256 - (new_stress*2) + ",132,1) 0%, rgba(192,108,132,1) 15%, rgba(108,91,123,1) 50%, rgba(53,92,125,1) 85%, rgba(53,92,125,1) 100%);");
             }
             $("#modal-body").text('Stress level reduced by : ' + destress_value);
-            modal.show();
+            // modal.show();
         }).fail( function () {
             alert('failed');
         });
-//        window.location.replace("/destress");
+        window.location.replace("/destress");
     }
 
     function deleteDestressActivity(e) {
