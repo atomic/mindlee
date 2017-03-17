@@ -11,6 +11,7 @@
 
     .axis text {
         font-family: sans-serif;
+        color: rgba(255,255,255,0);
         font-size: 11px;
     }
 
@@ -25,7 +26,7 @@
         padding-bottom: -30%;
     }
     .tick > text{
-        color: #00E8FF;
+        color: #FFFFFF;
     }
 
     .flex-activity-right {
@@ -51,6 +52,10 @@
     }
     .flex-activity {
         display: flex;
+    }
+    svg > * {
+        font-weight: bold;
+        font-size: large;
     }
 </style>
 
@@ -110,7 +115,7 @@
 
                 vis.append('svg:path')
                         .attr('d', line(hist))
-                        .attr('stroke', 'blue')
+                        .attr('stroke', '#00d2d4')
                         .attr('stroke-width', 2)
                         .attr('fill', 'none');
 
